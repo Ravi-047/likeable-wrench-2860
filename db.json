@@ -1,0 +1,116 @@
+{
+  "Furniture": [
+    {
+      "id": 1,
+      "title": "Napster Metal Queen Bed (6x5)",
+      "image": "https://p.rmjo.in/moodShot/i05w1kj4-1024x512.jpg",
+      "description": "Find ultimate peace with Napster Bed. Designed to echo your inner zen, Napster bed ensures a good night’s sleep with its simple yet functional design. This trim and compact bed, combined with slim legs, give it a sleek and minimalist look.",
+      "dimensions": "75&ldquo; L x 62&ldquo; B x 37&ldquo; H",
+      "color": "#000000",
+      "material": "Metal",
+      "features_specs": [
+        "High-quality metal (Black)",
+        "Ideal mattress size (L x B): 72&ldquo; x 60&ldquo;",
+        "Plywood mattress surface",
+        "Footboard height: 17.2&ldquo;",
+        "Lightweight and rust-free"
+      ],
+      "rental": 319,
+      "deposit": 489,
+      "days": "4 days",
+      "rent_months": 3,
+      "wishlist": false,
+      "category": "bedroom"
+    },
+    {
+      "id": 2,
+      "title": "Aurora Wooden Queen Bed (6x5)",
+      "image": "https://p.rmjo.in/moodShot/m10su6oo-1024x512.jpg",
+      "description": "The Aurora bed's frame provides a simple & stylish look to your room. The light brown colour of the bed matches any decor. The cot's frame has a low height & a headboard for you to lean comfortably",
+      "dimensions": "72&ldquo; L x 60&ldquo; B x 8&ldquo; H",
+      "color": "#632c10",
+      "material": "Solid woood",
+      "features_specs": [
+        "Cot frame with Headboard",
+        "Slatteed matress frame",
+        "Wooden headboard",
+        "Footboard height: 17.2&ldquo;",
+        "To fit Mattress Size: 72&ldquo; L x 60&ldquo; B"
+      ],
+      "rental": 539,
+      "deposit": 829,
+      "days": "4 days",
+      "rent_months": 3,
+      "wishlist": false,
+      "category": "bedroom"
+    },
+    {
+      "id": 3,
+      "title": "Napster Metal Single Bed (6x3)",
+      "image": "https://p.rmjo.in/moodShot/kgk2znv0-1024x512.jpg",
+      "description": "Find ultimate peace with Napster Bed. Designed to echo your inner zen, Napster bed ensures a good night’s sleep with its simple yet functional design. This trim and compact bed, combined with slim legs, give it a sleek and minimalist look. frame has a low height & a headboard for you to lean comfortably",
+      "dimensions": "75&ldquo; L x 36&ldquo; B x 37&ldquo; H",
+      "color": "#000000",
+      "material": "Metal",
+      "features_specs": [
+        "High-quality metal (Black)",
+        "Ideal mattress size (L x B): 72&ldquo; x 36&ldquo;",
+        "Plywood mattress surface",
+        "Footboard height: 17.2&ldquo;",
+        "Lightweight and rust-free"
+      ],
+      "rental": 249,
+      "deposit": 379,
+      "days": "4 days",
+      "rent_months": 3,
+      "wishlist": false,
+      "category": "bedroom"
+    },
+    {
+      "id": 4,
+      "title": "Poise Wooden Queen Bed (6x5)",
+      "image": "https://p.rmjo.in/moodShot/no45c49z-1024x512.jpg",
+      "description": "Comfort and compactness, get them both with the Poise queen bed. The bed's strong metal frame ensures durability while the honey-toned solid wood adds both style and comfort to the mix.",
+      "dimensions": "72&ldquo; L x 60&ldquo; B x 17&ldquo; H",
+      "color": "#885429",
+      "material": "Metal & Solid Wood",
+      "features_specs": [
+        "Metal bodied bed",
+        "Solid wood headboard",
+        "Plywood mattress surface",
+        "Durable coating to prevent rust",
+        "Honey finish",
+        "To fit Mattress Size: 72&ldquo;  L x 60&ldquo;  B"
+      ],
+      "rental": 549,
+      "deposit": 849,
+      "days": "4 days",
+      "rent_months": 3,
+      "wishlist": false,
+      "category": "bedroom"
+    },
+    {
+      "id": 5,
+      "title": "Aurora Wooden Single Bed (6x3)",
+      "image": "https://p.rmjo.in/moodShot/n84sut65-1024x512.jpg",
+      "description": "Meet Aurora—a no-frill bed with a timeless design that makes for a perfect staycation at home. Crafted from solid wood with a contemporary dark brown finish, Aurora bed also comes with a solid headboard that makes lounging on the bed more comfortable than ever.",
+      "dimensions": "72&ldquo; L x 39&ldquo; B x 8&ldquo; H",
+      "color": "#632c10",
+      "material": "Metal & Solid Wood",
+      "features_specs": [
+        "Metal bodied bed",
+        "Solid wood headboard",
+        "Plywood mattress surface",
+        "Durable coating to prevent rust",
+        "Honey finish",
+        "To fit Mattress Size: 72&ldquo;  L x 60&ldquo;  B"
+      ],
+      "rental": 549,
+      "deposit": 849,
+      "days": "4 days",
+      "rent_months": 3,
+      "wishlist": false,
+      "category": "bedroom"
+    }
+  ]
+}
