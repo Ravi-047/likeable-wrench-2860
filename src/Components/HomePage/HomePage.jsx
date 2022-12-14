@@ -13,6 +13,7 @@ import img4 from "../../Assets/carouselImage/paytm.jpg";
 // icons
 import covid_icon from "../../Assets/carouselImage/protection.png";
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar";
 
 const category_arr = [
   {
@@ -38,7 +39,7 @@ const category_arr = [
             d="M4 6.45l4.991 2.638 4.992-2.639v5.432l-5.007 2.614L4 11.88z"
           />
           <path
-            stroke-linecap="round"
+            strokeLinecap="round"
             stroke-linejoin="round"
             d="M8.991 14.315V9.088L4.031 6.51 4 6.662v5.219z"
           />
@@ -263,6 +264,7 @@ const HomePage = () => {
 
   return (
     <div>
+      <Navbar />
       <div>Home Page</div>
       <div className={styles.outer_slider}>
         <div className={styles.img_slider}>
