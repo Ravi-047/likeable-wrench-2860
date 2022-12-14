@@ -13,7 +13,7 @@ import img4 from "../../Assets/carouselImage/paytm.jpg";
 // icons
 import covid_icon from "../../Assets/carouselImage/protection.png";
 import { Link } from "react-router-dom";
-import Navbar from "../Navbar";
+// import Navbar from "../Navbar";
 
 const category_arr = [
   {
@@ -264,7 +264,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div>Home Page</div>
       <div className={styles.outer_slider}>
         <div className={styles.img_slider}>
