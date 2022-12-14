@@ -1,0 +1,24 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+.navcss {
+  height: 80px;
+  border: 1px solid black;
+  width: 100%;
+
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.logo {
+  width: fit-content;
+}
+
+.searchBox {
+  width: 100px;
+  border: 1px solid black;
+}
+.inputBox {
+  width: 500px;
+}

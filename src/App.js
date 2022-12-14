@@ -1,11 +1,14 @@
-
-import './App.css';
-
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import SideCart from "./Components/SideCart";
+import Account from "./Components/Account";
 function App() {
   return (
     <div>
       <div>
-        <h2>75&ldquo; L x 62&ldquo; B x 37&ldquo; H</h2>
+        <Navbar />
+        <SideCart />
+        <Account />
       </div>
     </div>
   );
