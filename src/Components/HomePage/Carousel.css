@@ -1,0 +1,36 @@
+.thumbs-wrapper,
+.carousel-status {
+  display: none;
+}
+.carousel .control-dots {
+  background: white;
+  width: 9%;
+  margin: auto;
+  left: 45%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.slider-wrapper .slide img {
+  border-radius: 10px;
+}
+
+.carousel .control-dots .dot {
+  background: black;
+}
+
+.carousel.carousel-slider .control-arrow {
+  background: black;
+  height: 20%;
+  top: 40%;
+}
+
+.carousel .control-prev.control-arrow {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.carousel .control-next.control-arrow {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}

@@ -1,0 +1,66 @@
+.outer_slider {
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  background: #b3c3d0;
+  margin-top: 30px;
+}
+
+.img_slider {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.covid_19_saftey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0px;
+}
+
+.covid_19_saftey > span > img {
+  width: 24px;
+}
+
+.covid_sen {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.knowmore {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.allCategoty {
+  width: 90%;
+  margin: auto;
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.eachCategory {
+  width: 100%;
+  padding: 15px 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.eachCategory:hover {
+  box-shadow: rgba(0, 0, 0, 0.831) 0px 5px 15px;
+}
