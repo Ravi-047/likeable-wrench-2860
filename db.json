@@ -112,5 +112,108 @@
       "wishlist": false,
       "category": "bedroom"
     }
+  ],
+  "category_furniture":[
+    {
+      "image":"https://www.rentomojo.com/public/images/category/package-bg/bedroom-v1_new.jpg",
+       "name":"Bedroom"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/package-bg/living-room-v2.jpg",
+       "name":"Living Room"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/package-bg/study-room-v1.jpg",
+       "name":"Work From Home(WFH)"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/package-bg/dining-v1.jpg",
+       "name":"Kitchen & Dinning"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/package-bg/baby-furniture.jpg",
+       "name":"Baby Furniture"
+    }
+
+  ],
+  "category_appliances":[
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/washing-machines.jpg",
+       "name":"Washine Machine"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/refrigerators-and-freezers.jpg",
+       "name":"Refreigerators & Freezers"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/televisions.jpg",
+       "name":"Televisions"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/air-conditioners.jpg",
+       "name":"Air Conditioners"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/air-purifiers.jpg",
+       "name":"Water & Air Purifiers"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/microwaves-and-induction-stoves.jpg",
+       "name":"Microwaves & Induction"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/air-coolers.jpg",
+       "name":"Air Coolers"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/dishwashers.jpg",
+       "name":"Dishwashers"
+    }
+
+  ],
+  "category_electronics":[
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/smartphones_new.jpg",
+       "name":"Smartphones"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/smart-devices-v1_new.jpg",
+       "name":"Smart Devices"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/laptops_new_2.jpg",
+       "name":"Laptops"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/tablets_new.jpg",
+       "name":"Tablets"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/electronics-category-filter/gaming-consoles/gamingConsole.png",
+       "name":"Gaming Console"
+    }
+
+  ],
+  "category_fitness":[
+    {
+      "image":"https://www.rentomojo.com/public/images/category/fitness/treadmills.jpg",
+       "name":"Treadmills"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/fitness/cross-trainers.jpg",
+       "name":"Cross Trainers"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/fitness/exercise-bikes.jpg",
+       "name":"Exercise Bikes"
+    },
+    {
+      "image":"https://www.rentomojo.com/public/images/category/fitness/massagers.png",
+       "name":"Massagers"
+    }
   ]
+
+
+
+
 }
