@@ -1,4 +1,4 @@
-# Rentomojo Template
+# First Rent Template
 
 ## Installation
 
@@ -6,9 +6,9 @@
 - please make sure you do not push package-lock.json
 
 ```
-npm install
-
-// run locally
-npm run start
+- Run the following commands inside,
+  - `npm install`
+  - `npm start`
+  - `npm run server` -> to start the json-server
 
 ```
