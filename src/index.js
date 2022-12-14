@@ -16,7 +16,6 @@ root.render(
       <AuthContextProveder>
         <App />
       </AuthContextProveder>
-
     </ChakraProvider>
   </BrowserRouter>
   // </React.StrictMode>
