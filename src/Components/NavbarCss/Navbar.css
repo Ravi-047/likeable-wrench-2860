@@ -3,22 +3,75 @@
   margin: 0%;
 }
 .navcss {
-  height: 80px;
-  border: 1px solid black;
+  background-color: #fff;
+  /* background-color: brown; */
+  height: 62px;
+  min-height: 50px;
+  border: 0px solid black;
   width: 100%;
-
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 16%);
+  text-align: center;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
-}
-.logo {
-  width: fit-content;
+  transition: background-color 0.4s ease-in;
+  border-radius: 0;
+  z-index: 7;
+  position: fixed !important;
+  box-sizing: border-box !important;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Muli, sans-serif !important;
+  /* display: block; */
+  /* position: sticky; */
+  /* overflow: hidden; */
 }
 
-.searchBox {
+.logo {
+  width: fit-content;
+  width: 100px;
+  height: 79px;
+  border-radius: 35%;
+  border: 1px solid red;
+}
+
+/* .searchBox {
   width: 100px;
   border: 1px solid black;
-}
+} */
+
 .inputBox {
   width: 500px;
 }
+
+.cityLogo {
+  /* border: 1px solid; */
+  width: 90%;
+  margin: 5px;
+}
+.cityLogo :hover {
+  border: 3px solid purple;
+}
+.cityLogo span {
+  text-align: center;
+}
+
+.allCity {
+  display: grid;
+  align-items: center;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+}
+
+#chakra-modal-mymodal {
+  /* margin-top: 30px; */
+  width: 1000px;
+  height: 1000px;
+  border: 3px solid green;
+}
+
+.spanName {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
