@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import Navbar from "./Components/LoginAndNavbar/Navbar";
 import MainRoutes from "./Pages/MainRoutes";
+
 const App = () => {
   return (
     <div>
