@@ -1,0 +1,195 @@
+.container {
+    background-color: #f5f7fa;
+    padding: 10px;
+}
+
+.flexDiv {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.main {
+    width: 70%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.CartPAge {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.paymentDiv {
+    border: 1px solid;
+    border-radius: 8px;
+    width: 330px;
+    font-size: 15px;
+}
+
+.PayableNow {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.spaceBetweeen {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+.coupon {
+    padding: 10px;
+    display: flex;
+}
+
+.productsDiv {
+    background-color: white;
+    width: 350px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.couponInput {
+    border: 1px solid;
+    width: 185px;
+    margin: 5px;
+    font-size: 13px;
+}
+
+.couponBtn {
+    background-color: white;
+    border: 1px solid;
+    font-size: 12px;
+    padding: 2px;
+    margin: 5px;
+}
+
+.only {
+    padding: 2px;
+    font-size: 10px;
+    background: #dc3226;
+    border-radius: 5px;
+    color: white;
+    width: 160px;
+}
+
+.fetchDiv {
+    display: flex;
+}
+
+.infoDiv {
+    /* display: flex; */
+    padding: 10px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.imgDiv {
+    width: 550px
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+}
+
+.namebtn {
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+}
+
+.Selector {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 90px;
+    width: 230px;
+}
+
+.selectTag {
+    border: 1px solid;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.ImportingDiv>div {
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.Big_btn_div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #dc3226;
+    width: 300px;
+    font-size: 14px;
+    align-items: center;
+    color: white;
+    margin-left: 5px;
+}
+
+.Big_btn_div2 {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #dc3226;
+    width: 300px;
+    font-size: 14px;
+    align-items: center;
+    color: white;
+    /* margin-left: 5px; */
+}
+
+.verificationFlex {
+    /* display: flex; */
+    width: 85%;
+    /* border: 1px solid; */
+}
+
+.verification {
+    margin-top: 50px;
+    display: flex;
+    margin-left: 5px;
+    height: 200px;
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 10px;
+    padding: 5px;
+    align-items: center;
+}
+
+.verificationFlex>h3 {
+    font-weight: bold;
+    padding-bottom: 70px;
+}
+.verification img{
+    height:190px
+}
+.numberVerify {}
+
+.numberVerifyBtn {
+    border: 1px solid;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.numberVerifyInput {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
