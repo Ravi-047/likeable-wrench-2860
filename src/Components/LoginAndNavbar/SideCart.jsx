@@ -16,9 +16,9 @@ import {
     InputLeftAddon,
     InputGroup,
     Stack,
+    useDisclosure
     useDisclosure,
     Image
-
 } from '@chakra-ui/react'
 
 import { AddIcon } from "@chakra-ui/icons"
@@ -43,7 +43,7 @@ function DrawerExample({ item }) {
             >
                 <DrawerOverlay />
                 <DrawerContent>
-                    <DrawerCloseButton />
+                    {/* <DrawerCloseButton /> */}
                     <DrawerHeader borderBottomWidth='1px'>
                         Create a new account
                     </DrawerHeader>
