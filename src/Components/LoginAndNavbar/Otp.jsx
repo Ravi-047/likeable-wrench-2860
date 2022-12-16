@@ -3,7 +3,9 @@ import {
     Button, ModalFooter, Input, FormLabel, FormControl, ModalBody,
     ModalCloseButton, ModalHeader, ModalContent, ModalOverlay, Modal, useDisclosure, Text, Image, Box
 } from "@chakra-ui/react"
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthContext'
 function Otp() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const initialRef = React.useRef(null)
@@ -11,6 +13,8 @@ function Otp() {
     const [phone, setPhone] = useState("");
     const [otp, setOtp] = useState("");
     const [sendOtp, setSendOtp] = useState(false);
+
+    const { isAuth } = useContext(AuthContext);
 
     const phoneNumberHandler = (e) => {
         if (phone.length === 10) {
@@ -33,8 +37,17 @@ function Otp() {
     if (sendOtp === true) {
         return (
             <>
-                <Button onClick={onOpen}>LOGIN/SIGNUP</Button>
-                <Modal
+                {
+                    isAuth === false ?
+                        <Button onClick={onOpen} style={{ backgroundColor: "red" }}>
+                            LOGIN/SIGNUP
+                        </Button>
+                        :
+                        <Button>
+                            Ragini
+                        </Button>
+                }
+                <Modal className="loginModal"
                     // initialFocusRef={initialRef}
                     // finalFocusRef={finalRef}
                     isOpen={isOpen}
@@ -69,7 +82,16 @@ function Otp() {
     else {
         return (
             <>
-                <Button onClick={onOpen}>LOGIN/SIGNUP</Button>
+                {
+                    isAuth === false ?
+                        <Button onClick={onOpen}>
+                            LOGIN/SIGNUP
+                        </Button>
+                        :
+                        <Button>
+                            Ragini
+                        </Button>
+                }
                 <Modal
                     initialFocusRef={initialRef}
                     finalFocusRef={finalRef}

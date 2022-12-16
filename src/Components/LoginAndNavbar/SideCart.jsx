@@ -17,22 +17,24 @@ import {
     InputGroup,
     Stack,
     useDisclosure
-
+    useDisclosure,
+    Image
 } from '@chakra-ui/react'
 
 import { AddIcon } from "@chakra-ui/icons"
 import React from 'react'
 
 
-function DrawerExample() {
+function DrawerExample({ item }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const firstField = React.useRef()
 
     return (
         <>
-            <Button leftIcon={<AddIcon />} colorScheme='teal' onClick={onOpen}>
-                Create user
-            </Button>
+            <div className="cityLogo" leftIcon={<AddIcon />} colorScheme='teal' onClick={onOpen}>
+                <Image src={item.url} />
+                <span className='spanName'> {item.name} </span>
+            </div>
             <Drawer
                 isOpen={isOpen}
                 placement='right'
@@ -41,7 +43,7 @@ function DrawerExample() {
             >
                 <DrawerOverlay />
                 <DrawerContent>
-                    <DrawerCloseButton />
+                    {/* <DrawerCloseButton /> */}
                     <DrawerHeader borderBottomWidth='1px'>
                         Create a new account
                     </DrawerHeader>

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Napster Metal Queen Bed (6x5)",
-      "image": "https://p.rmjo.in/moodShot/i05w1kj4-1024x512.jpg",
+      "image": "https://p.rmjo.in/productSquare/53rmy7yr-500x500.jpg",
       "description": "Find ultimate peace with Napster Bed. Designed to echo your inner zen, Napster bed ensures a good night’s sleep with its simple yet functional design. This trim and compact bed, combined with slim legs, give it a sleek and minimalist look.",
       "dimensions": "75&ldquo; L x 62&ldquo; B x 37&ldquo; H",
       "color": "#000000",
@@ -1492,7 +1492,7 @@
   "category_furniture":[
     {
       "image":"https://www.rentomojo.com/public/images/category/package-bg/bedroom-v1_new.jpg",
-       "name":"Bedroom"
+       "name":"bedroom"
     },
     {
       "image":"https://www.rentomojo.com/public/images/category/package-bg/living-room-v2.jpg",
@@ -1508,7 +1508,7 @@
     },
     {
       "image":"https://www.rentomojo.com/public/images/category/package-bg/baby-furniture.jpg",
-       "name":"Baby Furniture"
+       "name":"babyfurniture"
     }
 
   ],
