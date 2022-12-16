@@ -1,22 +1,22 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Input, Image, Stack, InputGroup, InputLeftElement, InputRightElement, MenuItem, MenuList, WrapItem, Wrap, ButtonGroup, Button, MenuButton, Menu, Box } from '@chakra-ui/react'
 import { SearchIcon, ChevronDownIcon } from "@chakra-ui/icons"
-import { useContext } from 'react'
+import { useContext } from 'react';
+import { CityContext } from '../../Context/CityContext';
 import { HStack, Text } from '@chakra-ui/react'
 import style from "../NavbarCss/Navbar.css"
-import Login from './Login'
 import Otp from './Otp'
 import Location from "./Location"
 
 const Navbar = () => {
-
+    const { city } = useContext(CityContext);
     const cartItem = [];
     return (
         <div className='navcss'>
             <HStack spacing='20px'>
                 <Box className='logoBox' >
-                    <Link to="/">
+                    <Link to={`/${city}`}  >
                         <Image
                             className='logo'
                             borderRadius='full'

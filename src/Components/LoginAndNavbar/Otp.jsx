@@ -6,6 +6,7 @@ import {
 import React, { useState, useContext } from "react"
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthContext'
+import HoverProfile from "./HoverProfile";
 function Otp() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const initialRef = React.useRef(null)
@@ -14,7 +15,7 @@ function Otp() {
     const [otp, setOtp] = useState("");
     const [sendOtp, setSendOtp] = useState(false);
 
-    const { isAuth } = useContext(AuthContext);
+    const { isAuth, toggleAuth } = useContext(AuthContext);
 
     const phoneNumberHandler = (e) => {
         if (phone.length === 10) {
@@ -32,14 +33,15 @@ function Otp() {
     }
     const otpSubmitHandler = () => {
         setSendOtp(false);
-        alert("login Successful")
+        toggleAuth(!isAuth);
+        onClose();
     }
     if (sendOtp === true) {
         return (
             <>
                 {
                     isAuth === false ?
-                        <Button onClick={onOpen} style={{ backgroundColor: "red" }}>
+                        <Button className="loginBtn" onClick={onOpen} style={{ backgroundColor: "red" }}>
                             LOGIN/SIGNUP
                         </Button>
                         :
@@ -89,7 +91,9 @@ function Otp() {
                         </Button>
                         :
                         <Button>
+                            {/* add popup here */}
                             Ragini
+                            <HoverProfile />
                         </Button>
                 }
                 <Modal

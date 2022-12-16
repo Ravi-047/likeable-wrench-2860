@@ -16,8 +16,9 @@
   justify-content: space-evenly;
   transition: background-color 0.4s ease-in;
   border-radius: 0;
-  z-index: 7;
-  position: fixed !important;
+  z-index: 2999;
+  position: sticky;
+  top: 0;
   box-sizing: border-box !important;
   color: rgba(0, 0, 0, 0.87);
   font-family: Muli, sans-serif !important;
@@ -49,7 +50,8 @@
   margin: 5px;
 }
 .cityLogo :hover {
-  border: 3px solid purple;
+  border: 1px solid red;
+  border-radius: 10px;
 }
 .cityLogo span {
   text-align: center;
@@ -75,3 +77,6 @@
   margin: auto;
 }
 
+.loginBtn {
+  font-size: 5px;
+}

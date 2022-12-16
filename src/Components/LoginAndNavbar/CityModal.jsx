@@ -40,7 +40,7 @@ export default function CityModal({ isOpen, onClose }) {
                 </ModalHeader>
                 <ModalCloseButton />
                 <ModalBody pb={6}>
-                    <City cityData={cityData} />
+                    <City cityData={cityData} onClose={onClose} />
                 </ModalBody>
             </ModalContent>
         </Modal>
