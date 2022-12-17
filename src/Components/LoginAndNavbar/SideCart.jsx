@@ -21,20 +21,31 @@ import {
 } from '@chakra-ui/react'
 
 import { AddIcon } from "@chakra-ui/icons"
-import React from 'react'
+import React, { useContext } from "react"
+import { CityContext } from "../../Context/CityContext";
+import { useNavigate } from 'react-router-dom';
 
 
-function DrawerExample({ item }) {
+function DrawerExample({ item, onModalClose }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const firstField = React.useRef()
-
+    const { applyCity } = useContext(CityContext);
+    const navigate = useNavigate();
     return (
         <>
-            <div className="cityLogo" leftIcon={<AddIcon />} colorScheme='teal' onClick={onOpen}>
+            <div className="cityLogo" leftIcon={<AddIcon />} colorScheme='teal'
+                onClick={() => {
+                    onOpen();
+                    applyCity(item.name)
+                    onModalClose();
+                    navigate(`/${item.name}`)
+                }
+                }
+            >
                 <Image src={item.url} />
                 <span className='spanName'> {item.name} </span>
             </div>
-            <Drawer
+            {/* <Drawer
                 isOpen={isOpen}
                 placement='right'
                 initialFocusRef={firstField}
@@ -42,7 +53,6 @@ function DrawerExample({ item }) {
             >
                 <DrawerOverlay />
                 <DrawerContent>
-                    {/* <DrawerCloseButton /> */}
                     <DrawerHeader borderBottomWidth='1px'>
                         Create a new account
                     </DrawerHeader>
@@ -93,7 +103,7 @@ function DrawerExample({ item }) {
                         <Button colorScheme='blue'>Submit</Button>
                     </DrawerFooter>
                 </DrawerContent>
-            </Drawer>
+            </Drawer> */}
         </>
     )
 }
