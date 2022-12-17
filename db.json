@@ -1489,7 +1489,7 @@
       "category": "workfromhome"
     }
   ],
-  "category_furniture":[
+  "category_Furniture":[
     {
       "image":"https://www.rentomojo.com/public/images/category/package-bg/bedroom-v1_new.jpg",
        "name":"bedroom"
@@ -1512,7 +1512,7 @@
     }
 
   ],
-  "category_appliances":[
+  "category_Appliances":[
     {
       "image":"https://www.rentomojo.com/public/images/category/appliances-bg/washing-machines.jpg",
        "name":"Washine Machine"
@@ -1547,7 +1547,7 @@
     }
 
   ],
-  "category_electronics":[
+  "category_Electronics":[
     {
       "image":"https://www.rentomojo.com/public/images/category/appliances-bg/smartphones_new.jpg",
        "name":"Smartphones"
@@ -1570,7 +1570,7 @@
     }
 
   ],
-  "category_fitness":[
+  "category_Fitness":[
     {
       "image":"https://www.rentomojo.com/public/images/category/fitness/treadmills.jpg",
        "name":"Treadmills"

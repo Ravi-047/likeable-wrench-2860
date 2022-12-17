@@ -17,9 +17,13 @@ const BlankCart = () => {
             <p>Add a few items to your cart and come back here for an
                 express checkout process!</p>
 
+
+            <Button bg="red.500">Browse catalogue</Button>
+
             <Button bg="red.500" >
                 <Link to={`/${city}/furniture`} >Browser Cataloge</Link>
             </Button>
+
         </Container>
     )
 }
