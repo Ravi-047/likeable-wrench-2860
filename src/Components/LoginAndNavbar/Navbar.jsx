@@ -29,7 +29,7 @@ const Navbar = () => {
                 </Box>
                 <Box >
                     <Text fontSize='30px' fontWeight="extrabold" fontStyle="italic" color='tomato' fontFamily="sans-serif">
-                        firstRent
+                        <Link to={`/${city}`} > firstRent</Link>
                     </Text>
                 </Box>
                 <Box >
@@ -47,11 +47,26 @@ const Navbar = () => {
                 <Box >
                     {
                         cartItem.length === 0 ? <Link to="/blank">
-                            <strong>Cart</strong>
+                            <strong>
+                                <Image
+                                    className='logo'
+                                    boxSize='100px'
+                                    src='./imagess/cart.png'
+                                    alt='Dan Abramov'
+
+                                />
+                                Cart</strong>
                         </Link>
                             :
                             <Menu>
                                 <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                                    <Image
+                                        className='logo'
+                                        borderRadius='full'
+                                        boxSize='100px'
+                                        src='./imagess/first_Rent.png'
+                                        alt='Dan Abramov'
+                                    />
                                     Cart
                                 </MenuButton>
                                 <MenuList>
