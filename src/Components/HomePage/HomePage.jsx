@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./HomePage.module.css";
@@ -17,6 +17,7 @@ import ProductCarousel from "./ProductCarousel";
 
 import MoreData from "./MoreRent";
 import Subscriber from "./Subscriber";
+import { CityContext } from "../../Context/CityContext";
 
 const category_arr = [
   {
@@ -263,11 +264,11 @@ const category_arr = [
 ];
 
 const HomePage = () => {
+  const { city } = useContext(CityContext);
   const slide = [img1, img2, img3, img4];
 
   return (
     <div>
-      <div>Home Page</div>
       <div className={styles.outer_slider}>
         <div className={styles.img_slider}>
           <Carousel autoPlay infiniteLoop>
@@ -294,7 +295,11 @@ const HomePage = () => {
 
       <div className={styles.allCategoty}>
         {category_arr.map(({ id, icon, name }) => (
-          <Link to="" key={id} className={styles.eachCategory}>
+          <Link
+            to={`/${city}/${name}`}
+            key={id}
+            className={styles.eachCategory}
+          >
             <div>{icon}</div>
             <p>{name}</p>
           </Link>
@@ -337,16 +342,18 @@ const HomePage = () => {
       </div>
 
       {/* happy subscriber  */}
-      <div className={styles.happy__subscriber}>
-        <p className={styles.title__des}>
-          Over 1.5 lac <span>happy subscribers</span>
-        </p>
-        <div></div>
-        <p className={styles.__happy__dis}>
-          Here's what they have to say about their RentoMojo experience.
-        </p>
-        <div>
-          <Subscriber />
+      <div className={styles.__main__subs__}>
+        <div className={styles.happy__subscriber}>
+          <p className={styles.title__des}>
+            Over 1.5 lac <span>happy subscribers</span>
+          </p>
+          <div></div>
+          <p className={styles.__happy__dis}>
+            Here's what they have to say about their FirstRent experience.
+          </p>
+          <div>
+            <Subscriber />
+          </div>
         </div>
       </div>
     </div>

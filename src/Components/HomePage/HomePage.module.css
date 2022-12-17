@@ -1,14 +1,14 @@
 .outer_slider {
-  width: 90%;
+  width: 85%;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 30px;
   background: #b3c3d0;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .img_slider {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 30px;
   overflow: hidden;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .covid_sen {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -34,15 +34,16 @@
   align-items: center;
   justify-items: center;
   gap: 5px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
 }
 
 .allCategoty {
-  width: 90%;
+  width: 85%;
   margin: auto;
   margin-top: 35px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   justify-content: space-between;
   align-items: center;
   gap: 20px;
@@ -55,7 +56,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  border: 1px solid gray;
+  border: 1px solid #e2eaf0;
   border-radius: 10px;
   transition: 0.3s;
   cursor: pointer;
@@ -74,7 +75,7 @@
 }
 
 .productTitle__des {
-  width: 90%;
+  width: 85%;
   margin: auto;
   margin-top: 100px;
 }
@@ -96,14 +97,14 @@
 }
 
 .product_Carousel {
-  width: 90%;
+  width: 95%;
   margin: auto;
   margin-bottom: 50px;
 }
 
 .__moreThingsRent__ {
   padding-top: 50px;
-  width: 90%;
+  width: 85%;
   margin: auto;
   margin-bottom: 50px;
 }
@@ -135,7 +136,7 @@
 }
 
 .__moreThingsRent__ + div {
-  width: 90%;
+  width: 85%;
   margin: auto;
   margin-bottom: 20px;
 }
@@ -149,8 +150,12 @@
 
 /* happy__subscriber  */
 
+.__main__subs__ {
+  overflow: hidden;
+}
+
 .happy__subscriber {
-  width: 90%;
+  width: 85%;
   margin: auto;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -160,4 +165,47 @@
   font-size: 19px;
   color: #717171;
   font-weight: 600;
+}
+
+/* responsive  */
+
+@media (max-width: 1024px) {
+  .covid_sen {
+    font-size: 11px;
+    font-weight: 400;
+  }
+
+  .knowmore {
+    gap: 2px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 976px) {
+  .covid_19_saftey {
+    display: none;
+  }
+
+  .eachCategory {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .allCategoty {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .eachCategory {
+    font-size: 14px;
+  }
+
+  .each__more__rent p:nth-child(2) {
+    font-size: 15px;
+  }
+
+  .each__more__rent p:nth-child(3) {
+    font-size: 12px;
+  }
 }
