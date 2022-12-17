@@ -13,7 +13,6 @@ const MainRoutes = () => {
   return (
     <Routes>
       <Route path={`/:${location}`} element={<Home />} />
-      {/* <Route path="/:param" element={<Home />} /> */}
       <Route path={`/:${location}/:param`} element={<Category />} />
       <Route path= {`/:${location}/:param/:para`} element={<Product />} />
       <Route path={`/:${location}/:param/:para/:id`} element={<Checkout />} />
