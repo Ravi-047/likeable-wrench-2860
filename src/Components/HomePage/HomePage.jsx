@@ -267,7 +267,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <div>Home Page</div>
+      <div><Link to="/pune">Home Page</Link></div>
       <div className={styles.outer_slider}>
         <div className={styles.img_slider}>
           <Carousel autoPlay infiniteLoop>

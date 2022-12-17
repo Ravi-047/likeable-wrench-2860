@@ -16,7 +16,6 @@ import {
     InputLeftAddon,
     InputGroup,
     Stack,
-    useDisclosure
     useDisclosure,
     Image
 } from '@chakra-ui/react'
