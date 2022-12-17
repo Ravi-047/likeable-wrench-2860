@@ -8,13 +8,15 @@ import BlankCart from "../Components/LoginAndNavbar/BlankCart";
 import Account from "../Components/LoginAndNavbar/Account";
 import BlankWishList from "../Components/LoginAndNavbar/BlankWishList";
 import SettingPage from "../Components/LoginAndNavbar/SettingPage"
+import AdminLogin from "../Components/Admin/AdminLogin";
+import AdminDashboard from "../Components/Admin/AdminDashboard";
 const MainRoutes = () => {
   const location = "bangalore"
   return (
     <Routes>
       <Route path={`/:${location}`} element={<Home />} />
       <Route path={`/:${location}/:param`} element={<Category />} />
-      <Route path= {`/:${location}/:param/:para`} element={<Product />} />
+      <Route path={`/:${location}/:param/:para`} element={<Product />} />
       <Route path={`/:${location}/:param/:para/:id`} element={<Checkout />} />
       <Route path="/blank" element={<BlankCart />} />
       <Route path="/account" element={<Account />} />
