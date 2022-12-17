@@ -267,7 +267,6 @@ const HomePage = () => {
 
   return (
     <div>
-      <div><Link to="/pune">Home Page</Link></div>
       <div className={styles.outer_slider}>
         <div className={styles.img_slider}>
           <Carousel autoPlay infiniteLoop>
@@ -337,16 +336,18 @@ const HomePage = () => {
       </div>
 
       {/* happy subscriber  */}
-      <div className={styles.happy__subscriber}>
-        <p className={styles.title__des}>
-          Over 1.5 lac <span>happy subscribers</span>
-        </p>
-        <div></div>
-        <p className={styles.__happy__dis}>
-          Here's what they have to say about their RentoMojo experience.
-        </p>
-        <div>
-          <Subscriber />
+      <div className={styles.__main__subs__}>
+        <div className={styles.happy__subscriber}>
+          <p className={styles.title__des}>
+            Over 1.5 lac <span>happy subscribers</span>
+          </p>
+          <div></div>
+          <p className={styles.__happy__dis}>
+            Here's what they have to say about their FirstRent experience.
+          </p>
+          <div>
+            <Subscriber />
+          </div>
         </div>
       </div>
     </div>

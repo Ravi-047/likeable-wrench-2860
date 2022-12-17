@@ -10,6 +10,10 @@ import {
   FaDribbble,
 } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
+import { IoIosPaperPlane } from "react-icons/io";
+import android from "../../Assets/android.png";
+import ios from "../../Assets/ios.png";
+
 const Footer = () => {
   return (
     <div>
@@ -119,6 +123,27 @@ const Footer = () => {
 
             <div>
               <h3>NEED HELP ?</h3>
+              <div className={styles.chat__option}>
+                <button>Chat with us (9AM - 6PM)</button>
+              </div>
+              <div className={styles.__mail_rento__}>
+                <a
+                  href="mailto:rento@firstrento.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IoIosPaperPlane /> rento@firstrento.com
+                </a>
+              </div>
+              <h3>DOWNLOAD APP</h3>
+              <div className={styles.__store_anios}>
+                <div>
+                  <img src={android} alt="android" />
+                </div>
+                <div>
+                  <img src={ios} alt="ios" />
+                </div>
+              </div>
             </div>
           </div>
 
@@ -128,26 +153,40 @@ const Footer = () => {
             <div>© 2022. Edunetwork Pvt. Ltd.</div>
             <div className={styles.__social__icons__}>
               <span>
-                <FaFacebookF />
+                <Link>
+                  <FaFacebookF />
+                </Link>
               </span>
               <span>
-                <FaTwitter />
+                <Link>
+                  <FaTwitter />
+                </Link>
               </span>
               <span>
-                <FaLinkedinIn />
+                <Link>
+                  <FaLinkedinIn />
+                </Link>
               </span>
               <span>
-                <FaYoutube />
+                <Link>
+                  <FaYoutube />
+                </Link>
               </span>
               <span>
-                <ImInstagram />
+                <Link>
+                  <ImInstagram />
+                </Link>
               </span>
               <span>
-                <FaDribbble />
+                <Link>
+                  <FaDribbble />
+                </Link>
               </span>
             </div>
             <div>
-              Go Up <MdKeyboardArrowUp />
+              <button>
+                Go Up <MdKeyboardArrowUp />
+              </button>
             </div>
           </div>
         </div>

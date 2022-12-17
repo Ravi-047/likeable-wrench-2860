@@ -1,6 +1,10 @@
-.__outer_div_carousel__ {
+/* .__outer_div_carousel__ {
   overflow: hidden;
   height: 420px;
+} */
+
+.react-multiple-carousel__arrow::before {
+  left: -15px;
 }
 
 .react-multi-carousel-list {
