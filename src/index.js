@@ -16,16 +16,13 @@ root.render(
   // <React.StrictMode>
   <BrowserRouter>
     <ChakraProvider>
-
-      <Provider store={store}>
-        <CityContextProvider>
+      <CityContextProvider>
+        <Provider store={store}>
           <AuthContextProvider>
             <App />
           </AuthContextProvider>
-        </CityContextProvider>
-      </Provider>
-
-     
+        </Provider>
+      </CityContextProvider>
     </ChakraProvider>
   </BrowserRouter>
   // </React.StrictMode>

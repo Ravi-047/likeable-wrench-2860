@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { CityContext } from "../../Context/CityContext";
 import { getProducts } from "../../Redux/action";
 
 import "./ProductCarousel.css";
 
 const ProductCarousel = () => {
+  const { city } = useContext(CityContext);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -39,7 +41,7 @@ const ProductCarousel = () => {
   }, [dispatch, productData.length]);
 
   const product = productData?.map((item) => (
-    <Link to="" key={item.id}>
+    <Link to={`/${city}/Furniture/${item.title}/${item.id}`} key={item.id}>
       <div className="__each__Product__">
         <div className="__each__imgage__">
           <img src={item.image} alt="product" />

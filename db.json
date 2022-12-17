@@ -1,4 +1,35 @@
 {
+  "cart": [
+    {
+      "id": 10,
+      "title": "Hutch Metal Queen Hydraulic Storage Bed (6x5)",
+      "image": "https://p.rmjo.in/moodShot/vyi06e6u-1024x512.jpg",
+      "description": "Comfort, elegance & storage—get them all with Hutch Storage bed. The bed's sturdy metal frame ensures durability, while the honey-toned solid wood adds a touch of elegant styling, and the cushioned headboard provides comfort unlike any other.",
+      "dimensions": "76&ldquo; L x 62&ldquo; B x 35.5&ldquo; H",
+      "color": "#632c10",
+      "material": "Metal & Solid Wood",
+      "features_specs": [
+        "Honey brown finish",
+        "Ideal mattress size (L x B): 72&ldquo; x 60&ldquo;",
+        "Sturdy metal frame",
+        "Leathered headboard",
+        "Anti-rust, durable coating"
+      ],
+      "img_slide": [
+        "https://p.rmjo.in/productSquare/7i306dfx-500x500.jpg",
+        "https://p.rmjo.in/productSquare/phhpbdlz-500x500.jpg",
+        "https://p.rmjo.in/productSquare/jvvzs7ij-500x500.jpg",
+        "https://p.rmjo.in/productSquare/pp918y06-500x500.jpg"
+      ],
+      "rental": 1319,
+      "deposit": 2039,
+      "days": 4,
+      "rent_months": 3,
+      "wishlist": false,
+      "quantity": 4,
+      "category": "bedroom"
+    }
+  ],
   "furniture": [
     {
       "id": 1,
@@ -331,7 +362,9 @@
       "dimensions": "72&ldquo; L x 36&ldquo; B x 4&ldquo; H",
       "color": "",
       "material": "Coir Foam Mattress",
-      "features_specs": ["Foam filling for support"],
+      "features_specs": [
+        "Foam filling for support"
+      ],
       "img_slide": [
         "https://p.rmjo.in/productSquare/m7137rq1-500x500.jpg",
         "https://p.rmjo.in/productSquare/qaxglbfq-500x500.jpg",
@@ -355,7 +388,9 @@
       "dimensions": "72&ldquo; L x 36&ldquo; B x 4&ldquo; H",
       "color": "",
       "material": "Foam Mattress",
-      "features_specs": ["Foam filling for support"],
+      "features_specs": [
+        "Foam filling for support"
+      ],
       "img_slide": [
         "https://p.rmjo.in/productSquare/h98dzvch-500x500.jpg",
         "https://p.rmjo.in/productSquare/xfxm0axn-500x500.jpg",
@@ -379,7 +414,9 @@
       "dimensions": "72&ldquo; L x 36&ldquo; B x 6&ldquo; H",
       "color": "",
       "material": "Foam & Spring",
-      "features_specs": ["Foam filling for support"],
+      "features_specs": [
+        "Foam filling for support"
+      ],
       "img_slide": [
         "https://p.rmjo.in/productSquare/dqu1k65a-500x500.jpg",
         "https://p.rmjo.in/productSquare/tslatrz0-500x500.jpg",
@@ -403,8 +440,12 @@
       "dimensions": "78&ldquo; L x 36&ldquo; B x 4&ldquo; H",
       "color": "",
       "material": "Coir & Foam",
-      "features_specs": ["Coir & Foam filling for support"],
-      "img_slide": ["https://p.rmjo.in/productSquare/6s4zfpvi-500x500.jpg"],
+      "features_specs": [
+        "Coir & Foam filling for support"
+      ],
+      "img_slide": [
+        "https://p.rmjo.in/productSquare/6s4zfpvi-500x500.jpg"
+      ],
       "rental": 189,
       "deposit": 229,
       "days": 4,
@@ -427,7 +468,9 @@
         "Alleviates stress & pressure points",
         "Ergonomic spine & body support"
       ],
-      "img_slide": ["https://p.rmjo.in/productSquare/vvmd3qvd-500x500.jpg"],
+      "img_slide": [
+        "https://p.rmjo.in/productSquare/vvmd3qvd-500x500.jpg"
+      ],
       "rental": 449,
       "deposit": 699,
       "days": 4,
@@ -680,7 +723,10 @@
       "dimensions": "32&ldquo; L x 27&ldquo; B x 32&ldquo; H",
       "color": "#000000",
       "material": "Art Leather",
-      "features_specs": ["Leatherette covering", "Foam filling"],
+      "features_specs": [
+        "Leatherette covering",
+        "Foam filling"
+      ],
       "img_slide": [
         "https://p.rmjo.in/productSquare/6jks7lk8-500x500.jpg",
         "https://p.rmjo.in/productSquare/eqg3o64h-500x500.jpg",
@@ -736,7 +782,10 @@
       "dimensions": "24&ldquo; L x 30&ldquo; B x 32&ldquo; H",
       "color": "#808080",
       "material": "Fabrc & Wood",
-      "features_specs": ["Fully upholstered couch", "Soft foam cushioning"],
+      "features_specs": [
+        "Fully upholstered couch",
+        "Soft foam cushioning"
+      ],
       "img_slide": [
         "https://p.rmjo.in/productSquare/yjt0v3ut-500x500.jpg",
         "https://p.rmjo.in/productSquare/d5kd90sh-500x500.jpg",
@@ -817,7 +866,10 @@
       "dimensions": "35&ldquo; L x 23&ldquo; B x 14&ldquo; H",
       "color": "#f7d6ab",
       "material": "Solid Wood",
-      "features_specs": ["Wide-table top", "Coffee table/center table"],
+      "features_specs": [
+        "Wide-table top",
+        "Coffee table/center table"
+      ],
       "img_slide": [
         "https://p.rmjo.in/productSquare/qi010v6f-500x500.jpg",
         "https://p.rmjo.in/productSquare/pd074iic-500x500.jpg",
@@ -840,7 +892,11 @@
       "dimensions": "24&ldquo; L x 24&ldquo; B x 18&ldquo; H",
       "color": "#645452",
       "material": "Solid Wood",
-      "features_specs": ["Solid Wood", "Dark Finish", "Sturdy and Compact"],
+      "features_specs": [
+        "Solid Wood",
+        "Dark Finish",
+        "Sturdy and Compact"
+      ],
       "img_slide": [
         "https://p.rmjo.in/productSquare/fscs2rid-500x500.jpg",
         "https://p.rmjo.in/productSquare/ax9kcnwm-500x500.jpg",
@@ -919,7 +975,10 @@
       "dimensions": "46&ldquo; L x 16&ldquo; B x 24&ldquo; H",
       "color": "#645452",
       "material": "Engineered Wood",
-      "features_specs": ["3 shelf + 2 cabinet configuration", "Wenge finish"],
+      "features_specs": [
+        "3 shelf + 2 cabinet configuration",
+        "Wenge finish"
+      ],
       "img_slide": [
         "https://p.rmjo.in/productSquare/tyjcmnwb-500x500.jpg",
         "https://p.rmjo.in/productSquare/goc1w1u0-500x500.jpg",
@@ -1224,7 +1283,9 @@
         "Rubber wood table top",
         "Wrought iron"
       ],
-      "img_slide": ["https://p.rmjo.in/productSquare/2qxe35gr-500x500.jpg"],
+      "img_slide": [
+        "https://p.rmjo.in/productSquare/2qxe35gr-500x500.jpg"
+      ],
       "rental": 679,
       "deposit": 1049,
       "days": 5,
@@ -1448,7 +1509,10 @@
       "dimensions": "42&ldquo; L x 22&ldquo; B x 30&ldquo; H",
       "color": "#e5b477",
       "material": "Engineering Wood",
-      "features_specs": ["Beech finish", "Large tabletop area"],
+      "features_specs": [
+        "Beech finish",
+        "Large tabletop area"
+      ],
       "img_slide": [
         "https://p.rmjo.in/productSquare/9kxg1c3a-500x500.jpg",
         "https://p.rmjo.in/productSquare/992jvv5h-500x500.jpg",
@@ -1472,7 +1536,10 @@
       "dimensions": "24&ldquo; L x 12&ldquo; B x 36&ldquo; H",
       "color": "#645452",
       "material": "Engineering Wood",
-      "features_specs": ["3 shelf configuration", "Wenge finish"],
+      "features_specs": [
+        "3 shelf configuration",
+        "Wenge finish"
+      ],
       "img_slide": [
         "https://p.rmjo.in/productSquare/pzts2dn4-500x500.jpg",
         "https://p.rmjo.in/productSquare/840gka5p-500x500.jpg",
@@ -1489,107 +1556,100 @@
       "category": "workfromhome"
     }
   ],
-  "category_Furniture":[
+  "category_Furniture": [
     {
-      "image":"https://www.rentomojo.com/public/images/category/package-bg/bedroom-v1_new.jpg",
-       "name":"bedroom"
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/bedroom-v1_new.jpg",
+      "name": "bedroom"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/package-bg/living-room-v2.jpg",
-       "name":"Living Room"
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/living-room-v2.jpg",
+      "name": "Living Room"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/package-bg/study-room-v1.jpg",
-       "name":"Work From Home(WFH)"
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/study-room-v1.jpg",
+      "name": "Work From Home(WFH)"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/package-bg/dining-v1.jpg",
-       "name":"Kitchen & Dinning"
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/dining-v1.jpg",
+      "name": "Kitchen & Dinning"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/package-bg/baby-furniture.jpg",
-       "name":"babyfurniture"
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/baby-furniture.jpg",
+      "name": "babyfurniture"
     }
-
   ],
-  "category_Appliances":[
+  "category_Appliances": [
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/washing-machines.jpg",
-       "name":"Washine Machine"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/washing-machines.jpg",
+      "name": "Washine Machine"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/refrigerators-and-freezers.jpg",
-       "name":"Refreigerators & Freezers"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/refrigerators-and-freezers.jpg",
+      "name": "Refreigerators & Freezers"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/televisions.jpg",
-       "name":"Televisions"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/televisions.jpg",
+      "name": "Televisions"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/air-conditioners.jpg",
-       "name":"Air Conditioners"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/air-conditioners.jpg",
+      "name": "Air Conditioners"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/air-purifiers.jpg",
-       "name":"Water & Air Purifiers"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/air-purifiers.jpg",
+      "name": "Water & Air Purifiers"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/microwaves-and-induction-stoves.jpg",
-       "name":"Microwaves & Induction"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/microwaves-and-induction-stoves.jpg",
+      "name": "Microwaves & Induction"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/air-coolers.jpg",
-       "name":"Air Coolers"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/air-coolers.jpg",
+      "name": "Air Coolers"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/dishwashers.jpg",
-       "name":"Dishwashers"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/dishwashers.jpg",
+      "name": "Dishwashers"
     }
-
   ],
-  "category_Electronics":[
+  "category_Electronics": [
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/smartphones_new.jpg",
-       "name":"Smartphones"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/smartphones_new.jpg",
+      "name": "Smartphones"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/smart-devices-v1_new.jpg",
-       "name":"Smart Devices"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/smart-devices-v1_new.jpg",
+      "name": "Smart Devices"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/laptops_new_2.jpg",
-       "name":"Laptops"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/laptops_new_2.jpg",
+      "name": "Laptops"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/appliances-bg/tablets_new.jpg",
-       "name":"Tablets"
+      "image": "https://www.rentomojo.com/public/images/category/appliances-bg/tablets_new.jpg",
+      "name": "Tablets"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/electronics-category-filter/gaming-consoles/gamingConsole.png",
-       "name":"Gaming Console"
+      "image": "https://www.rentomojo.com/public/images/category/electronics-category-filter/gaming-consoles/gamingConsole.png",
+      "name": "Gaming Console"
     }
-
   ],
-  "category_Fitness":[
+  "category_Fitness": [
     {
-      "image":"https://www.rentomojo.com/public/images/category/fitness/treadmills.jpg",
-       "name":"Treadmills"
+      "image": "https://www.rentomojo.com/public/images/category/fitness/treadmills.jpg",
+      "name": "Treadmills"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/fitness/cross-trainers.jpg",
-       "name":"Cross Trainers"
+      "image": "https://www.rentomojo.com/public/images/category/fitness/cross-trainers.jpg",
+      "name": "Cross Trainers"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/fitness/exercise-bikes.jpg",
-       "name":"Exercise Bikes"
+      "image": "https://www.rentomojo.com/public/images/category/fitness/exercise-bikes.jpg",
+      "name": "Exercise Bikes"
     },
     {
-      "image":"https://www.rentomojo.com/public/images/category/fitness/massagers.png",
-       "name":"Massagers"
+      "image": "https://www.rentomojo.com/public/images/category/fitness/massagers.png",
+      "name": "Massagers"
     }
   ]
-
-
-
-
 }

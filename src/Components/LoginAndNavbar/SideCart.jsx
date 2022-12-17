@@ -1,54 +1,52 @@
 import {
-    Drawer,
-    DrawerBody,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-    Button,
-    Textarea,
-    FormLabel,
-    Box,
-    Select,
-    InputRightAddon,
-    Input,
-    InputLeftAddon,
-    InputGroup,
-    Stack,
-    useDisclosure,
-    Image
-} from '@chakra-ui/react'
-
-import { AddIcon } from "@chakra-ui/icons"
-import React, { useContext } from "react"
-import { CityContext } from "../../Context/CityContext";
-import { useNavigate } from 'react-router-dom';
-
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Button,
+  Textarea,
+  FormLabel,
+  Box,
+  Select,
+  InputRightAddon,
+  Input,
+  InputLeftAddon,
+  InputGroup,
+  Stack,
+  useDisclosure,
+  Image,
+} from "@chakra-ui/react";
 
 import { AddIcon } from "@chakra-ui/icons";
-import React from "react";
+import React, { useContext } from "react";
+import { CityContext } from "../../Context/CityContext";
+import { useNavigate } from "react-router-dom";
 
 function DrawerExample({ item, onModalClose }) {
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const firstField = React.useRef()
-    const { applyCity } = useContext(CityContext);
-    const navigate = useNavigate();
-    return (
-        <>
-            <div className="cityLogo" leftIcon={<AddIcon />} colorScheme='teal'
-                onClick={() => {
-                    onOpen();
-                    applyCity(item.name)
-                    onModalClose();
-                    navigate(`/${item.name}`)
-                }
-                }
-            >
-                <Image src={item.url} />
-                <span className='spanName'> {item.name} </span>
-            </div>
-            {/* <Drawer
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const firstField = React.useRef();
+  const { applyCity } = useContext(CityContext);
+  const navigate = useNavigate();
+  return (
+    <>
+      <div
+        className="cityLogo"
+        leftIcon={<AddIcon />}
+        colorScheme="teal"
+        onClick={() => {
+          onOpen();
+          applyCity(item.name);
+          onModalClose();
+          navigate(`/${item.name}`);
+        }}
+      >
+        <Image src={item.url} />
+        <span className="spanName"> {item.name} </span>
+      </div>
+      {/* <Drawer
                 isOpen={isOpen}
                 placement='right'
                 initialFocusRef={firstField}
@@ -109,9 +107,8 @@ function DrawerExample({ item, onModalClose }) {
                     </DrawerFooter>
                 </DrawerContent>
             </Drawer> */}
-        </>
-    )
-
+    </>
+  );
 }
 
 export default DrawerExample;

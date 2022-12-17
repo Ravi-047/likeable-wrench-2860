@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./HomePage.module.css";
@@ -17,6 +17,7 @@ import ProductCarousel from "./ProductCarousel";
 
 import MoreData from "./MoreRent";
 import Subscriber from "./Subscriber";
+import { CityContext } from "../../Context/CityContext";
 
 const category_arr = [
   {
@@ -263,6 +264,7 @@ const category_arr = [
 ];
 
 const HomePage = () => {
+  const { city } = useContext(CityContext);
   const slide = [img1, img2, img3, img4];
 
   return (
@@ -293,7 +295,11 @@ const HomePage = () => {
 
       <div className={styles.allCategoty}>
         {category_arr.map(({ id, icon, name }) => (
-          <Link to="" key={id} className={styles.eachCategory}>
+          <Link
+            to={`/${city}/${name}`}
+            key={id}
+            className={styles.eachCategory}
+          >
             <div>{icon}</div>
             <p>{name}</p>
           </Link>
