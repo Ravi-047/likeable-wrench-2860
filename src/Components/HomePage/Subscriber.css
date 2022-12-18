@@ -55,3 +55,20 @@
   font-weight: 400;
   text-align: justify;
 }
+
+@media (max-width: 668px) {
+  .__subs__underQuotes__ {
+    display: none;
+  }
+
+  .__profile__name__subs {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 569px) {
+  .__subs__dis__ {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
