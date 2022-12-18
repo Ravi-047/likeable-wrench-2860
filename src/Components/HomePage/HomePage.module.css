@@ -10,6 +10,7 @@
   width: 100%;
   border-radius: 30px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .covid_19_saftey {

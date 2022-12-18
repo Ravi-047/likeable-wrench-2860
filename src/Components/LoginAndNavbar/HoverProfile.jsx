@@ -7,10 +7,8 @@ import {
     PopoverContent,
     PopoverHeader,
     PopoverBody,
-    PopoverFooter,
     PopoverArrow,
     PopoverCloseButton,
-    PopoverAnchor,
     Button,
     Portal, Stack
 } from '@chakra-ui/react'
@@ -22,12 +20,12 @@ const HoverProfile = () => {
         <div>
             <Popover>
                 <PopoverTrigger>
-                    <Button>Ragini</Button>
+                    <Button className='profilebtn'>Ragini Kaushal</Button>
                 </PopoverTrigger>
                 <Portal>
-                    <PopoverContent>
+                    <PopoverContent width="250px" paddingBottom="10px" >
                         <PopoverArrow />
-                        <PopoverHeader>User Profile</PopoverHeader>
+                        <PopoverHeader>Welcome Ragini !!</PopoverHeader>
                         <PopoverCloseButton />
                         <PopoverBody>
                             <Stack>
@@ -50,7 +48,7 @@ const HoverProfile = () => {
                                 }}>Logout</Button>
                             </Stack>
                         </PopoverBody>
-                        <PopoverFooter>This is the footer</PopoverFooter>
+
                     </PopoverContent>
                 </Portal>
             </Popover>

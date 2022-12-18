@@ -7,6 +7,7 @@ import React, { useState, useContext } from "react"
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthContext'
 import HoverProfile from "./HoverProfile";
+// import * as style from "../NavbarCss/Navbar.css"
 function Otp() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const initialRef = React.useRef(null)
@@ -36,20 +37,26 @@ function Otp() {
         toggleAuth(!isAuth);
         onClose();
     }
+    const style = {
+        backgroundColor: "orangered",
+        color: "white",
+        borderRadius: "10px",
+        fontSize: "12px",
+    }
     if (sendOtp === true) {
         return (
             <>
                 {
                     isAuth === false ?
-                        <Button className="loginBtn" onClick={onOpen} style={{ backgroundColor: "red" }}>
+                        <Button className="loginBtn" onClick={onOpen} style={style}>
                             LOGIN/SIGNUP
                         </Button>
                         :
-                        <Button>
+                        <Button style={{ backgroundColor: "red" }}>
                             Ragini
                         </Button>
                 }
-                <Modal className="loginModal"
+                <Modal className="loginModal" 
                     // initialFocusRef={initialRef}
                     // finalFocusRef={finalRef}
                     isOpen={isOpen}
@@ -57,9 +64,11 @@ function Otp() {
                 >
                     <ModalOverlay />
                     <ModalContent>
-                        <ModalHeader><Image src="./imagess/first_Rent.png" /></ModalHeader>
+                        <ModalHeader>
+                            <Image src={process.env.PUBLIC_URL + `/imagess/first_Rent.png`} />
+                        </ModalHeader>
                         <ModalCloseButton />
-                        <ModalBody pb={6}>
+                        <ModalBody pb={6} >
                             <FormControl>
                                 {/* <FormLabel>Enter OTP</FormLabel> */}
                                 <FormLabel>Please enter the OTP</FormLabel>
@@ -86,13 +95,13 @@ function Otp() {
             <>
                 {
                     isAuth === false ?
-                        <Button onClick={onOpen}>
+                        <Button className="loginBtn" onClick={onOpen} style={style}>
                             LOGIN/SIGNUP
                         </Button>
                         :
                         <Button>
                             {/* add popup here */}
-                            Ragini
+
                             <HoverProfile />
                         </Button>
                 }
@@ -104,7 +113,7 @@ function Otp() {
                 >
                     <ModalOverlay />
                     <ModalContent>
-                        <ModalHeader><Image src="./imagess/first_Rent.png" /></ModalHeader>
+                        <ModalHeader><Image src={process.env.PUBLIC_URL + `/imagess/first_Rent.png`} /></ModalHeader>
                         <ModalCloseButton />
                         <ModalBody pb={6}>
                             <FormControl>

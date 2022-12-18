@@ -235,6 +235,7 @@ const Footer = () => {
                   <div>
                     <img src={ios} alt="ios" />
                   </div>
+             
                 </div>
               </div>
             </div>
@@ -246,34 +247,34 @@ const Footer = () => {
             <div>© 2022. Edunetwork Pvt. Ltd.</div>
             <div className={styles.__social__icons__}>
               <span>
-                <Link>
+                <a target="_blank" href="https://www.facebook.com/rentomojo"  >
                   <FaFacebookF />
-                </Link>
+                </a>
               </span>
               <span>
-                <Link>
+                <a target="_blank" href="https://twitter.com/rentomojo">
                   <FaTwitter />
-                </Link>
+                </a>
               </span>
               <span>
-                <Link>
+                <a target="_blank" href="https://www.linkedin.com/company/rentomojo/">
                   <FaLinkedinIn />
-                </Link>
+                </a>
               </span>
               <span>
-                <Link>
+                <a target="_blank" href="https://www.youtube.com/c/RentomojoOfficial">
                   <FaYoutube />
-                </Link>
+                </a>
               </span>
               <span>
-                <Link>
+                <a target="_blank" href="https://www.instagram.com/rentomojo/">
                   <ImInstagram />
-                </Link>
+                </a>
               </span>
               <span>
-                <Link>
+                <a target="_blank" href="https://dribbble.com/RentoMojo">
                   <FaDribbble />
-                </Link>
+                </a>
               </span>
             </div>
             <div>
