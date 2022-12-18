@@ -24,13 +24,18 @@ import { useContext, useEffect, useState } from "react";
 import { CiFilter } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
 import { CityContext } from "../../Context/CityContext";
+import Subnavbar from "./Subnavbar";
+import  "./category.css"
 
 function Product() {
   const { city } = useContext(CityContext);
   const { param } = useParams();
   const { para } = useParams();
+  const { id } = useParams();
   const [proddata, setProddata] = useState([]);
   const [catData, setCatData] = useState([]);
+  const [item, setItem] = useState({});
+  // const [toggle,setToggle]=useState(true)
   const [sliderValue, setSliderValue] = useState(6);
   const [checkboxvalue, setCheckboxvalue] = useState(para);
 
@@ -52,11 +57,21 @@ function Product() {
       .then((res) => setProddata(res.data));
   };
 
-  const checkboxhandler = (e) => {
+  const checkboxhandler = (e,index) => {
+     console.log(index)
     setCheckboxvalue(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
-
+  const Carthandler = (prod) => {
+    // axios
+    //   .get(`http://localhost:8080/furniture/${id}`)
+    //   .then((res) => setItem(res.data));
+    // setItem(prod)
+    // console.log(prod)
+    axios
+      .post(`http://localhost:8080/cart`, prod)
+      .then((res) => console.log(res.data));
+  };
   useEffect(() => {
     getCat();
     getProd();
@@ -64,65 +79,7 @@ function Product() {
 
   return (
     <Box>
-      <Flex
-        bg="#FAFAFA"
-        border="1px solid #e6e6e6"
-        justifyContent="space-between"
-        h="55px"
-        alignItems="center"
-        pl="8%"
-        pr="8%"
-      >
-        <Flex
-          display={{ base: "none", md: "none", lg: "flex" }}
-          fontSize="lg"
-          color="#717171"
-        >
-          <Link to="/">Home {">"}</Link>
-          <Link to="/">
-            {param}
-            {">"}
-          </Link>
-          <Link to="/">{para}</Link>
-        </Flex>
-        <Flex>
-          <Text
-            mr={["10px", "20px", "40px"]}
-            fontSize={["sm", "md", "lg"]}
-            color="#717171"
-          >
-            <Link to="/product">Packages</Link>
-          </Text>
-          <Text
-            mr={["10px", "20px", "40px"]}
-            fontSize={["sm", "md", "lg"]}
-            color="#717171"
-          >
-            <Link to="/furniture">Furniture</Link>
-          </Text>
-          <Text
-            mr={["10px", "20px", "40px"]}
-            fontSize={["sm", "md", "lg"]}
-            color="#717171"
-          >
-            <Link to="/appliances">Appliances</Link>
-          </Text>
-          <Text
-            mr={["10px", "20px", "40px"]}
-            fontSize={["sm", "md", "lg"]}
-            color="#717171"
-          >
-            <Link to="/electronics">Electronics</Link>
-          </Text>
-          <Text
-            mr={["10px", "20px", "40px"]}
-            fontSize={["sm", "md", "lg"]}
-            color="#717171"
-          >
-            <Link to="/fitness">Fitness</Link>
-          </Text>
-        </Flex>
-      </Flex>
+      <Subnavbar/>
 
       <Flex pr="8%" pl="8%" gap="3%">
         <Box w="30%" h="200px">
@@ -178,9 +135,10 @@ function Product() {
             <Text fontSize="lg" mb="1rem">
               PRODUCT TYPE
             </Text>
-            {catData.map((ele) => (
+            {catData.map((ele,index) => (
               <Flex mt="1rem">
-                <Checkbox onChange={checkboxhandler} value={ele.name}>
+                {/* <Input type="radio"/> */}
+                <Checkbox textTransform="capitalize" onChange={(e)=>checkboxhandler(e,index)} value={ele.name}>
                   {ele.name}
                 </Checkbox>
               </Flex>
@@ -189,15 +147,16 @@ function Product() {
 
           <Box p="8%" border="1px solid #e6e6e6" mt="2rem">
             <Text fontSize="lg">AVAILABILITY</Text>
+
             <Checkbox mt="1rem" defaultChecked value="Out of Stock">
               Out of Stock
             </Checkbox>
           </Box>
         </Box>
-        <Box w="100%">
-          <Box p="0.8%" w="12%" mt="1rem" mb="1rem" bg="#FAFAFA">
-            <Flex>
-              <Text fontSize="lg" mr="0.5rem">
+        <Box w="100%" mb="250px">
+          <Box p="0.8%" w="16%" mt="1rem" mb="1rem" bg="#FAFAFA">
+            <Flex justifyContent="space-between">
+              <Text fontSize="lg" textTransform="capitalize" >
                 {para}
               </Text>
               <Link to={`/${param}`}>
@@ -208,10 +167,12 @@ function Product() {
           <SimpleGrid columns={[2, 2, 3]} columnGap="5%" rowGap="1%">
             {proddata.map((prod) => (
               <Link to={`/${city}/${param}/${para}/${prod.id}`} target="_blank">
-                <Box bg="white" border="1px solid #e6e6e6">
-                  <Image src={prod.image} h="270px" w="100%"></Image>
+                <Box bg="white" border="1px solid #e6e6e6" className="hoverproductbox">
+                  <Box h="270px" >
+                  <Image src={prod.image} w="100%" h="100%" objectFit="cover"  ></Image>
+                  </Box>
                   <Box p="5%">
-                    <Text fontSize="lg">{prod.title}</Text>
+                    <Text fontSize="lg" textOverflow="ellipsis">{prod.title}</Text>
                     <Divider
                       mt="3%"
                       mb="3%"
@@ -223,6 +184,7 @@ function Product() {
                       <Text>{prod.days} days</Text>
                     </Flex>
                   </Box>
+                  <Box className="hoverCartbutton" m="15px"><Link to="/"><Button w="100%" borderRadius="15px" onClick={()=>Carthandler(prod)} bg="none" border="1px solid skyblue" color="skyblue">Add to Cart</Button></Link></Box>
                 </Box>
               </Link>
             ))}

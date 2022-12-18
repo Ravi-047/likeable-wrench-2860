@@ -6,11 +6,14 @@ import axios from "axios";
 // import { useParams } from "react-router"
 import { BsArrowRightCircle } from "react-icons/bs";
 import { CityContext } from "../../Context/CityContext";
+import Subnavbar from "./Subnavbar";
+import "./category.css" 
 
 function Category() {
   const { city } = useContext(CityContext);
   const [catData, setCatData] = useState([]);
   const { param } = useParams();
+  const { para } = useParams();
 
   //    const electronics=[
   //     {
@@ -46,72 +49,18 @@ function Category() {
   // },[])
 
   return (
-    <Box>
+    <Box mb={["70px"]}>
       {/* <Box h="60px" bg="silver"></Box> */}
-      {/* <Navbar /> */}
-      <Flex
-        bg="#FAFAFA"
-        border="1px solid #e6e6e6"
-        justifyContent="space-between"
-        h="55px"
-        alignItems="center"
-        pl="8%"
-        pr="8%"
-      >
-        <Flex
-          display={{ base: "none", md: "none", lg: "flex" }}
-          fontSize="lg"
-          color="#717171"
-        >
-          <Link to={`/${city}`}>Home {">"}</Link>
-          <Link to="/">{param}</Link>
-        </Flex>
-        <Flex>
-          <Text
-            mr={["10px", "20px", "40px"]}
-            fontSize={["sm", "md", "lg"]}
-            color="#717171"
-          >
-            <Link to={`/${city}/product`}>Packages</Link>
-          </Text>
-          <Text
-            mr={["10px", "20px", "40px"]}
-            fontSize={["sm", "md", "lg"]}
-            color="#717171"
-          >
-            <Link to={`/${city}/furniture`}>Furniture</Link>
-          </Text>
-          <Text
-            mr={["10px", "20px", "40px"]}
-            fontSize={["sm", "md", "lg"]}
-            color="#717171"
-          >
-            <Link to={`/${city}/appliances`}>Appliances</Link>
-          </Text>
-          <Text
-            mr={["10px", "20px", "40px"]}
-            fontSize={["sm", "md", "lg"]}
-            color="#717171"
-          >
-            <Link to={`/${city}/electronics`}>Electronics</Link>
-          </Text>
-          <Text
-            mr={["10px", "20px", "40px"]}
-            fontSize={["sm", "md", "lg"]}
-            color="#717171"
-          >
-            <Link to={`/${city}/fitness`}>Fitness</Link>
-          </Text>
-        </Flex>
-      </Flex>
-
-      <Heading textAlign="center" mt="80px">
+      <Subnavbar/>
+      
+      
+      <Heading textAlign="center" size={{base:"sm",md:"lg",lg:"xl"}} mt={{base:"40px",md:"60px",lg:"80px"}} >
         Browse by {param} type
       </Heading>
 
-      <SimpleGrid columns={[2, 2, 4]} gap={[10, 15, "3%"]} w="85%" m="auto">
+      <SimpleGrid columns={{base:2, md:3, lg:4}} gap={{base:5, md:15, lg:"3%"}} w="85%" m="auto">
         {catData.map((ele, index) => (
-          <Box key={index} mt={["50px"]}>
+          <Box key={index} mt={{base:"15px",md:"30px",lg:"50px"}} className="cathover">
             <Link to={`/${city}/${param}/${ele.name}`}>
               <Image src={ele.image} />
               <Box
@@ -120,11 +69,12 @@ function Category() {
                 bg="#fff"
                 border="1px solid #e6e6e6"
                 w="70%"
-                p="4%"
-                fontSize="md"
+                p={{base:"1%",md:"3%",lg:"4%"}}
+                fontSize={{base:"xs",md:"sm",lg:"md"}}
                 m="auto"
-                mt="-25px"
+                mt={{base:"-10px",md:"-15px",lg:"-25px"}}
                 textAlign="center"
+                textTransform="capitalize"
               >
                 {ele.name}
               </Box>
@@ -132,13 +82,20 @@ function Category() {
           </Box>
         ))}
         <Box
-          mt={["50px"]}
+          // mt={["50px"]}
+          display="flex"
+          m="auto"
+          justifyContent="center"
+          flexDirection="column"
           textAlign="center"
           color="#1DBDC0"
-          justifyItems="center"
-          fontSize="xl"
+          
+        //   justifyContent="flex-center"
+          alignItem="center"
+          fontSize={{base:"sm",md:"lg",lg:"xl"}}
         >
-          View All in {param} <BsArrowRightCircle m="auto" w="20%" />
+            <BsArrowRightCircle  size="55px" w="30%" ml="50px" />
+          View All in {param} 
         </Box>
       </SimpleGrid>
     </Box>
