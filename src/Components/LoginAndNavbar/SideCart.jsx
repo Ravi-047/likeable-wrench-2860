@@ -43,7 +43,7 @@ function DrawerExample({ item, onModalClose }) {
           navigate(`/${item.name}`);
         }}
       >
-        <Image src={item.url} />
+        <Image src={process.env.PUBLIC_URL + item.url} />
         <span className="spanName"> {item.name} </span>
       </div>
       {/* <Drawer

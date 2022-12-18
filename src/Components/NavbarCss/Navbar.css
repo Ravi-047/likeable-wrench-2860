@@ -29,9 +29,9 @@
 
 .logo {
   width: fit-content;
-  width: 100px;
+  /* width: 100px;
   height: 79px;
-  border-radius: 35%;
+  border-radius: 35%; */
   border: 1px solid red;
 }
 
@@ -68,7 +68,6 @@
   /* margin-top: 30px; */
   width: 1000px;
   height: 1000px;
-  border: 3px solid green;
 }
 
 .spanName {
@@ -77,6 +76,44 @@
   margin: auto;
 }
 
-.loginBtn {
-  font-size: 5px;
+.loginBtn:hover {
+  background-color: white;
+  border: 2px solid orangered;
+  color: black;
+}
+.profilebtn :hover {
+  border: 1px solid orangered;
+}
+.searchBox {
+  width: 500px;
+  height: 40px;
+
+  border: 1px solid rgb(63, 61, 61);
+  border-radius: 7px;
+}
+
+.productPage {
+  min-height: 800px;
+}
+.overFlowDiv {
+  background-color: white;
+  position: fixed;
+  margin-top: 5px;
+  width: 500px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: left;
+  padding-left: 15px;
+}
+.blankCartimg {
+  width: 70%;
+  margin-top: 100px;
+  margin-right: 50px;
+}
+.cnt {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }

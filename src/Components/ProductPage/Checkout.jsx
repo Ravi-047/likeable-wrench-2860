@@ -17,7 +17,6 @@ import {
 } from "@chakra-ui/react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-// import { useParam } from "react-router"
 import { useContext, useEffect, useState } from "react";
 import Subnavbar from "./Subnavbar";
 import {AiTwotoneCheckCircle} from "react-icons/ai"
@@ -201,7 +200,7 @@ function Checkout() {
           <Box></Box>
         </Box>
       </Flex>
-    </Box>
+    </Box >
   );
 }
 export default Checkout;

@@ -1,4 +1,3 @@
-// import { useParams } from "react-router"
 import {
   Box,
   SimpleGrid,
@@ -19,7 +18,6 @@ import {
 } from "@chakra-ui/react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-// import { useParam } from "react-router"
 import { useContext, useEffect, useState } from "react";
 import { CiFilter } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
@@ -62,6 +60,7 @@ function Product() {
     setCheckboxvalue(e.target.value);
     // console.log(e.target.value);
   };
+  
   const Carthandler = (prod) => {
     // axios
     //   .get(`http://localhost:8080/furniture/${id}`)
@@ -71,16 +70,15 @@ function Product() {
     axios
       .post(`http://localhost:8080/cart`, prod)
       .then((res) => console.log(res.data));
+
   };
   useEffect(() => {
     getCat();
     getProd();
   }, [checkboxvalue]);
-
   return (
     <Box>
       <Subnavbar/>
-
       <Flex pr="8%" pl="8%" gap="3%">
         <Box w="30%" h="200px">
           <Flex mt="1rem" mb="1rem" justifyContent="space-between">
@@ -159,7 +157,7 @@ function Product() {
               <Text fontSize="lg" textTransform="capitalize" >
                 {para}
               </Text>
-              <Link to={`/${param}`}>
+              <Link to={`/${city}/${param}`}>
                 <AiOutlineClose size="25px" />
               </Link>
             </Flex>

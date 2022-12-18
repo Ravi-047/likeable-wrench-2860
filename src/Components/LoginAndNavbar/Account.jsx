@@ -3,7 +3,7 @@ import React from 'react'
 import { ChatIcon, LinkIcon, CheckCircleIcon, EmailIcon } from '@chakra-ui/icons'
 const Account = () => {
     return (
-        <div>
+        <div style={{ marginTop: "100px" }}>
             <Grid
 
                 templateRows='repeat(3, 1fr)'
@@ -17,25 +17,25 @@ const Account = () => {
                         spacing={4}
                         align='stretch'
                     >
-                        <Box h='40px' bg='yellow.200'>
+                        <Box h='40px'>
                             Live Order
                         </Box>
-                        <Box h='40px' bg='tomato'>
+                        <Box h='40px' >
                             Undelivered Order
                         </Box>
-                        <Box h='40px' bg='pink.100'>
+                        <Box h='40px' >
                             <EmailIcon />
                             Refund Status
                         </Box>
-                        <Box h='40px' bg='pink.100'>
+                        <Box h='40px' >
                             <CheckCircleIcon />
                             Easy Payment
                         </Box>
-                        <Box h='40px' bg='pink.100'>
+                        <Box h='40px' >
                             <LinkIcon />
                             Refferals
                         </Box>
-                        <Box h='40px' bg='pink.100'>
+                        <Box h='40px'>
                             <ChatIcon />
                             Request
                         </Box>
@@ -75,13 +75,13 @@ const Account = () => {
                 </GridItem>
                 <GridItem colSpan={4}   >
                     <HStack spacing='24px'>
-                        <Box h='40px' bg='yellow.200'>
+                        <Box h='40px' >
                             <Button>LEDGER</Button>
                         </Box>
-                        <Box h='40px' bg='tomato'>
+                        <Box h='40px' >
                             <Button> PAYMENT</Button>
                         </Box>
-                        <Box h='40px' bg='pink.100'>
+                        <Box h='40px' >
                             <Button> RENTOMONEY</Button>
                         </Box>
 
