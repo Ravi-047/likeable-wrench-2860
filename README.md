@@ -1,4 +1,4 @@
-# First Rent Template
+# First Rent (E-commerce website for renting home items )
 
 ## Installation
 
