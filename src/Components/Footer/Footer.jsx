@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Footer.module.css";
 import { MdKeyboardArrowRight, MdKeyboardArrowUp } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -11,10 +11,32 @@ import {
 } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
 import { IoIosPaperPlane } from "react-icons/io";
+import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 import android from "../../Assets/android.png";
 import ios from "../../Assets/ios.png";
 
 const Footer = () => {
+  const [click1, setClick1] = useState(false);
+  const [click2, setClick2] = useState(false);
+  const [click3, setClick3] = useState(false);
+  const [click4, setClick4] = useState(false);
+
+  const handleClick1 = () => {
+    setClick1(!click1);
+  };
+  const handleClick2 = () => {
+    setClick2(!click2);
+  };
+  const handleClick3 = () => {
+    setClick3(!click3);
+  };
+  const handleClick4 = () => {
+    setClick4(!click4);
+  };
+
+  const goToUp = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
   return (
     <div>
       <div className={styles.___main__footer__}>
@@ -57,8 +79,26 @@ const Footer = () => {
 
           <div className={styles.__site__info__}>
             <div>
-              <h3>FIRSTRENTO</h3>
-              <div>
+              <h3 onClick={handleClick1}>
+                FIRSTRENTO
+                {click1 ? (
+                  <span>
+                    <BsFillCaretUpFill />
+                  </span>
+                ) : (
+                  <span>
+                    <BsFillCaretDownFill />
+                  </span>
+                )}
+              </h3>
+
+              <div
+                className={
+                  click1
+                    ? `${styles.__site_details__} ${styles.active}`
+                    : `${styles.__site_details__}`
+                }
+              >
                 <Link to="">
                   <p>About US</p>
                 </Link>
@@ -85,8 +125,25 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3>INFORMATION</h3>
-              <div>
+              <h3 onClick={handleClick2}>
+                INFORMATION
+                {click2 ? (
+                  <span>
+                    <BsFillCaretUpFill />
+                  </span>
+                ) : (
+                  <span>
+                    <BsFillCaretDownFill />
+                  </span>
+                )}
+              </h3>
+              <div
+                className={
+                  click2
+                    ? `${styles.__site_details__} ${styles.active}`
+                    : `${styles.__site_details__}`
+                }
+              >
                 <Link to="">
                   <p>Blog</p>
                 </Link>
@@ -100,8 +157,25 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3>POLICIES</h3>
-              <div>
+              <h3 onClick={handleClick3}>
+                POLICIES
+                {click3 ? (
+                  <span>
+                    <BsFillCaretUpFill />
+                  </span>
+                ) : (
+                  <span>
+                    <BsFillCaretDownFill />
+                  </span>
+                )}
+              </h3>
+              <div
+                className={
+                  click3
+                    ? `${styles.__site_details__} ${styles.active}`
+                    : `${styles.__site_details__}`
+                }
+              >
                 <Link to="">
                   <p>Shipping Policy</p>
                 </Link>
@@ -122,26 +196,45 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3>NEED HELP ?</h3>
-              <div className={styles.chat__option}>
-                <button>Chat with us (9AM - 6PM)</button>
-              </div>
-              <div className={styles.__mail_rento__}>
-                <a
-                  href="mailto:rento@firstrento.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <IoIosPaperPlane /> rento@firstrento.com
-                </a>
-              </div>
-              <h3>DOWNLOAD APP</h3>
-              <div className={styles.__store_anios}>
-                <div>
-                  <img src={android} alt="android" />
+              <h3 onClick={handleClick4}>
+                NEED HELP ?
+                {click4 ? (
+                  <span>
+                    <BsFillCaretUpFill />
+                  </span>
+                ) : (
+                  <span>
+                    <BsFillCaretDownFill />
+                  </span>
+                )}
+              </h3>
+              <div
+                className={
+                  click4
+                    ? `${styles.__site_details__} ${styles.active}`
+                    : `${styles.__site_details__}`
+                }
+              >
+                <div className={styles.chat__option}>
+                  <button>Chat with us (9AM - 6PM)</button>
                 </div>
-                <div>
-                  <img src={ios} alt="ios" />
+                <div className={styles.__mail_rento__}>
+                  <a
+                    href="mailto:rento@firstrento.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <IoIosPaperPlane /> rento@firstrento.com
+                  </a>
+                </div>
+                <h3>DOWNLOAD APP</h3>
+                <div className={styles.__store_anios}>
+                  <div>
+                    <img src={android} alt="android" />
+                  </div>
+                  <div>
+                    <img src={ios} alt="ios" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -184,7 +277,7 @@ const Footer = () => {
               </span>
             </div>
             <div>
-              <button>
+              <button onClick={goToUp}>
                 Go Up <MdKeyboardArrowUp />
               </button>
             </div>

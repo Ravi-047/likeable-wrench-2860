@@ -109,11 +109,11 @@ button {
 
 .__store_anios div {
   width: 100%;
-  height: 35px;
+  height: fit-content;
 }
 
 .__store_anios img {
-  width: 100%;
+  width: 100px;
   height: 100%;
   object-fit: cover;
   cursor: pointer;
@@ -138,6 +138,10 @@ button {
   margin-bottom: 10px;
 }
 
+.__site__info__ > div > h3 > span {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .__store_anios {
     flex-direction: column;
@@ -158,5 +162,41 @@ button {
     width: 350px;
     padding: 0px;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 668px) {
+  .__site__info__ > div > h3 > span {
+    display: flex;
+  }
+  .__social__ {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .__site__info__ {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .__site__info__ h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .__site_details__ {
+    display: none;
+  }
+  .__site_details__.active {
+    display: block;
+  }
+
+  .__store_anios div {
+    height: fit-content;
   }
 }

@@ -209,3 +209,9 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 425px) {
+  .allCategoty {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
