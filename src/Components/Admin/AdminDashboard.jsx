@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import ReactApexChart from "react-apexcharts";
 import { Box } from "@chakra-ui/react"
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem, Text } from '@chakra-ui/react'
 const AdminDashboard = () => {
     const [dataCount, setDataCount] = useState({})
     const [totalCount, setTotalCount] = useState(0);
@@ -80,28 +80,21 @@ const AdminDashboard = () => {
 
     return (
 
-        <div>
-            {/* <Grid templateColumns='repeat(5, 1fr)' gap={6}>
-                <GridItem w='100%' h='10' bg='blue.500' />
-                <GridItem w='100%' h='10' bg='blue.500' />
-                <GridItem w='100%' h='10' bg='blue.500' />
-                <GridItem w='100%' h='10' bg='blue.500' />
-                <GridItem w='100%' h='10' bg='blue.500' />
-            </Grid>  */}
-            <Grid templateColumns='repeat(3, 1fr)' gap={3} >
-                <GridItem w="100%" bg='blue.500' h="300">
+        <div style={{ height: "500px", marginTop: "100px" }}>
+            <Grid templateColumns='repeat(3, 1fr)' gap={30} marginBottom="100px" marginLeft="200px" >
+                <GridItem w="50%" bg='orange.500' h="200" >
                     <div>
-                        <p>Total Products </p>
-                        <h3>{totalCount}</h3>
+                        <Text fontSize='2xl' textAlign="center" padding="15">Total Products </Text>
+                        <Text fontSize="4xl" color='white' textAlign="center">{totalCount}</Text>
                     </div>
                 </GridItem>
-                <GridItem>
+                <GridItem w="50%" bg='orange.500' h="200">
                     <div>
-                        <p>Total Categories </p>
-                        <h3>{Object.keys(dataCount).length}</h3>
+                        <Text fontSize='2xl' textAlign="center" padding="15">Total Categories </Text>
+                        <Text fontSize="4xl" color='white' textAlign="center">{Object.keys(dataCount).length}</Text>
                     </div>
                 </GridItem>
-                <GridItem>
+                <GridItem w="50%" bg='orange.500' h="200">
                     <div>
                         <ReactApexChart
                             options={pieChartOptions}
@@ -113,25 +106,22 @@ const AdminDashboard = () => {
                     </div>
                 </GridItem>
             </Grid>
+            <Grid templateColumns='repeat(5, 1fr)' gap={3} marginBottom="100px" marginLeft="50px" >
+                {
+                    allProductName.map((item) => {
+                        return (
 
-
-
-
-
-            {
-                allProductName.map((item) => {
-                    return (
-
-                        <div>
-                            <p>{item}</p>
-                            <h3>{dataCount[item]}</h3>
-                        </div>
-                    )
-                })
-            }
-
+                            <GridItem w='80%' h='100' bg='orange.500'>
+                                <div>
+                                    <Text fontSize="xl" color='white' textAlign="center">{item}</Text>
+                                    <Text fontSize="xl" color='white' textAlign="center">{dataCount[item]}</Text>
+                                </div>
+                            </GridItem>
+                        )
+                    })
+                }
+            </Grid>
         </div>
     )
 }
-
 export default AdminDashboard

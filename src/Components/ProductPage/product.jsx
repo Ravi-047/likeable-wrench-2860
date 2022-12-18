@@ -54,16 +54,15 @@ function Product() {
 
   const checkboxhandler = (e) => {
     setCheckboxvalue(e.target.value);
-    console.log(e.target.value);
+
   };
 
   useEffect(() => {
     getCat();
     getProd();
   }, [checkboxvalue]);
-
   return (
-    <Box>
+    <Box className="productPage">
       <Flex
         bg="#FAFAFA"
         border="1px solid #e6e6e6"
@@ -200,7 +199,7 @@ function Product() {
               <Text fontSize="lg" mr="0.5rem">
                 {para}
               </Text>
-              <Link to={`/${param}`}>
+              <Link to={`/${city}/${param}`}>
                 <AiOutlineClose size="25px" />
               </Link>
             </Flex>

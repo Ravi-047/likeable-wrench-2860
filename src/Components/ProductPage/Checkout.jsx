@@ -16,7 +16,8 @@ import {
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 // import { useParam } from "react-router"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { CityContext } from "../../Context/CityContext";
 
 function Checkout() {
   const { id } = useParams();
@@ -25,6 +26,7 @@ function Checkout() {
   const [item, setItem] = useState({});
   const [price, setPrice] = useState(item.rental);
   const [sliderValue, setSliderValue] = useState(6);
+  const { city } = useContext(CityContext);
 
   const getProd = () => {
     axios
@@ -64,12 +66,12 @@ function Checkout() {
           fontSize="lg"
           color="#717171"
         >
-          <Link to="/">Home {">"}</Link>
-          <Link to="/">
+          <Link to={`/${city}`}>Home {">"}</Link>
+          <Link to={`/${city}/${param}`}>
             {param}
             {">"}
           </Link>
-          <Link to="/">{para}</Link>
+          <Link to={`/${city}`}>{para}</Link>
           <Text>{item.title}</Text>
         </Flex>
         <Flex>
@@ -78,35 +80,35 @@ function Checkout() {
             fontSize={["sm", "md", "lg"]}
             color="#717171"
           >
-            <Link to="/product">Packages</Link>
+            <Link to={`/${city}/product`}>Packages</Link>
           </Text>
           <Text
             mr={["10px", "20px", "40px"]}
             fontSize={["sm", "md", "lg"]}
             color="#717171"
           >
-            <Link to="/Furniture">Furniture</Link>
+            <Link to={`/${city}/Furniture`}>Furniture</Link>
           </Text>
           <Text
             mr={["10px", "20px", "40px"]}
             fontSize={["sm", "md", "lg"]}
             color="#717171"
           >
-            <Link to="/Appliances">Appliances</Link>
+            <Link to={`/${city}/Appliances`}>Appliances</Link>
           </Text>
           <Text
             mr={["10px", "20px", "40px"]}
             fontSize={["sm", "md", "lg"]}
             color="#717171"
           >
-            <Link to="/Electronics">Electronics</Link>
+            <Link to={`/${city}/Electronics`}>Electronics</Link>
           </Text>
           <Text
             mr={["10px", "20px", "40px"]}
             fontSize={["sm", "md", "lg"]}
             color="#717171"
           >
-            <Link to="/Fitness">Fitness</Link>
+            <Link to={`/${city}/Fitness`}>Fitness</Link>
           </Text>
         </Flex>
       </Flex>
@@ -176,7 +178,7 @@ function Checkout() {
           <Box></Box>
         </Box>
       </Flex>
-    </Box>
+    </Box >
   );
 }
 export default Checkout;

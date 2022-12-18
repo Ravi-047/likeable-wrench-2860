@@ -11,7 +11,7 @@ const AdminLogin = () => {
     const submitHandler = (e) => {
         e.preventDefault()
         if (data.email === "admin@firstrent.com" && data.password === "admin123") {
-            alert("logi successfull");
+            alert("login successfull");
             navigate("/admindashboard")
         }
     }
@@ -24,87 +24,68 @@ const AdminLogin = () => {
     }
     return (
         <div>
-            <form >
-                <label htmlFor="">Enter Your Email</label>
+            <form style={{ display: "flex", flexDirection: "column", margin: "auto", width: "30%", border: "1px solid black", justifyContent: "space-evenly", alignItems: "center", height: "300px", marginTop: "60px", marginBottom: "60px" }} >
+                <h1> Admin Login form</h1>
+                <label htmlFor=""
+                    style={{ width: "70%" }}
+
+                >Enter Your Email</label>
                 <input
                     type="text"
                     value={data.email}
                     name="email"
                     placeholder='Enter Your email Id'
                     onChange={changeHandler}
+                    style={{
+                        border: "1px solid",
+                        width: "70%"
+                    }}
                 />
-                <label htmlFor="">Enter Your Password</label>
+                <label htmlFor=""
+                    style={{
+                        width: "70%"
+                    }}
+
+                >Enter Your Password</label>
                 <input
                     type="text"
                     name="password"
                     value={data.password}
                     placeholder='Enter Your password'
-                    onChange={changeHandler} />
-                <button onClick={submitHandler}> Submit</button>
+                    onChange={changeHandler}
+                    style={{
+                        border: "1px solid",
+                        width: "70%"
+                    }} />
+                <button onClick={submitHandler} style={{ backgroundColor: "orange", width: "100px", height: "50px", display: "flex", justifyContent: "space-around" }}  > Submit</button>
             </form>
         </div>
     )
 }
 
 export default AdminLogin
-/*
-import React, { useState, useContext } from 'react'
-import { AuthContext } from '../Context/AuthContextProvider';
-import axios from "axios";
-export default function Login() {
-    const { isAuth, toggleAuth } = useContext(AuthContext)
 
-    const [data, setData] = useState({
-        email: "",
-        password: "",
 
-    })
+/* function errorMessageExample() {
+  const [input, setInput] = useState('')
 
-    const onChangeHandler = (e) => {
-        const { name, value } = e.target
-        const newData = {
-            ...data, [name]: value
-        }
-        setData(newData)
-    }
-    const postData = () => {
-        return axios.post(`https://reqres.in/api/login`, data);
-    }
+  const handleInputChange = (e) => setInput(e.target.value)
 
-    const submitFormHandler = (e) => {
-        e.preventDefault()
-        const response = postData();
-        response
-            .then((res) => {
-                console.log("inside submit function => ", res);
-                toggleAuth();
-            })
-            .catch((err) => {
-                console.log("inside submit functuion => error ", err)
-            })
-    }
-    console.log(isAuth)
-    return (
-        <div>
-            <form style={{ display: "flex", flexDirection: "column", width: "30%", margin: "auto", border: "2px solid black", height: "400px", justifyContent: "space-evenly" }}>
-                <label htmlFor="email" > Your Email</label>
-                <input type="text"
-                    placeholder='enter your name'
-                    name="email"
-                    value={data.userEmail}
-                    onChange={onChangeHandler} />
-                <label htmlFor="password">Your Password</label>
-                <input
-                    type="text"
-                    placeholder='enter your password'
-                    name='password'
-                    value={data.userPassword}
-                    onChange={onChangeHandler} />
-                <button onClick={submitFormHandler}>Submit</button>
-            </form>
-        </div>
-    )
+  const isError = input === ''
+
+  return (
+    <FormControl isInvalid={isError}>
+      <FormLabel>Email</FormLabel>
+      <Input type='email' value={input} onChange={handleInputChange} />
+      {!isError ? (
+        <FormHelperText>
+          Enter the email you'd like to receive the newsletter on.
+        </FormHelperText>
+      ) : (
+        <FormErrorMessage>Email is required.</FormErrorMessage>
+      )}
+    </FormControl>
+  )
 }
-
 
 */

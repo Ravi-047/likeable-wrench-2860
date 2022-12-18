@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
-import Product from "../Components/product";
-import { Category } from "../Components/Category";
-import Checkout from "../Components/Checkout";
+import Product from "../Components/ProductPage/product";
+import { Category } from "../Components/ProductPage/Category";
+import Checkout from "../Components/ProductPage/Checkout";
 import BlankCart from "../Components/LoginAndNavbar/BlankCart";
 import Account from "../Components/LoginAndNavbar/Account";
 import BlankWishList from "../Components/LoginAndNavbar/BlankWishList";
@@ -22,6 +22,8 @@ const MainRoutes = () => {
       <Route path="/account" element={<Account />} />
       <Route path="/wishlist" element={<BlankWishList />} />
       <Route path="/setting" element={<SettingPage />} />
+      <Route path="/adminlogin" element={<AdminLogin />} />
+      <Route path="/admindashboard" element={<AdminDashboard />} />
     </Routes>
   );
 };
