@@ -28,6 +28,93 @@
       "wishlist": false,
       "quantity": 4,
       "category": "bedroom"
+    },
+    {
+      "id": 1,
+      "title": "Napster Metal Queen Bed (6x5)",
+      "image": "https://p.rmjo.in/productSquare/53rmy7yr-500x500.jpg",
+      "description": "Find ultimate peace with Napster Bed. Designed to echo your inner zen, Napster bed ensures a good night’s sleep with its simple yet functional design. This trim and compact bed, combined with slim legs, give it a sleek and minimalist look.",
+      "dimensions": "75&ldquo; L x 62&ldquo; B x 37&ldquo; H",
+      "color": "#000000",
+      "material": "Metal",
+      "features_specs": [
+        "High-quality metal (Black)",
+        "Ideal mattress size (L x B): 72&ldquo; x 60&ldquo;",
+        "Plywood mattress surface",
+        "Footboard height: 17.2&ldquo;",
+        "Lightweight and rust-free"
+      ],
+      "img_slide": [
+        "https://p.rmjo.in/productSquare/vmepbpv0-500x500.jpg",
+        "https://p.rmjo.in/productSquare/46avfhql-500x500.jpg",
+        "https://p.rmjo.in/productSquare/ui2xaf2v-500x500.jpg",
+        "https://p.rmjo.in/productSquare/04bz03i0-500x500.jpg",
+        "https://p.rmjo.in/productSquare/l0by95zm-500x500.jpg"
+      ],
+      "rental": 319,
+      "deposit": 489,
+      "days": 4,
+      "rent_months": 3,
+      "wishlist": false,
+      "quantity": 4,
+      "category": "bedroom"
+    },
+    {
+      "id": 23,
+      "title": "Garfield Ottoman",
+      "image": "https://p.rmjo.in/moodShot/taycn9bm-1024x512.jpg",
+      "description": "Put up your feet and let your sofa have the perfect companion with the Garfield Ottoman. Use it as a footstool or spare seating to welcome guests, it'll match any decor or home seamlessly.",
+      "dimensions": "22&ldquo; L x 22&ldquo; B x 15&ldquo; H",
+      "color": "#696b67",
+      "material": "Solid  wood",
+      "features_specs": [
+        "Upholstered seat",
+        "Rubberwood support legs",
+        "Brown Oak finish"
+      ],
+      "img_slide": [
+        "https://p.rmjo.in/productSquare/9o9eoir3-500x500.jpg",
+        "https://p.rmjo.in/productSquare/jy2bbe9f-500x500.jpg",
+        "https://p.rmjo.in/productSquare/uqtut16j-500x500.jpg",
+        "https://p.rmjo.in/productSquare/xmhqiirr-500x500.jpg"
+      ],
+      "rental": 189,
+      "deposit": 299,
+      "days": 4,
+      "rent_months": 3,
+      "wishlist": false,
+      "quantity": 5,
+      "category": "living room"
+    },
+    {
+      "id": 7,
+      "title": "Kipper Wooden Queen Bed (6x5)",
+      "image": "https://p.rmjo.in/moodShot/wrmpa6sj-1024x512.jpg",
+      "description": "Once you have the perfect comfy bed, your sleep just gets way better. With the Kipper Bed's versatile design, go rustic, contemporary or uber-chic and style your room the way you want.",
+      "dimensions": "75&ldquo; L x 63&ldquo; B x 10&ldquo; H",
+      "color": "#f7d6ab",
+      "material": "Solid Wood",
+      "features_specs": [
+        "Made using solid wood",
+        "Sturdy & stable",
+        "Slatted headboard, Versatile design",
+        "Footboard height: 10.5&ldquo;",
+        "To fit Mattress Size: 72&ldquo; L x 60&ldquo; B"
+      ],
+      "img_slide": [
+        "https://p.rmjo.in/productSquare/d4pyi30g-500x500.jpg",
+        "https://p.rmjo.in/productSquare/00jslqvb-500x500.jpg",
+        "https://p.rmjo.in/productSquare/tsd9eexe-500x500.jpg",
+        "https://p.rmjo.in/productSquare/f8gg0p08-500x500.jpg",
+        "https://p.rmjo.in/productSquare/ks8igd99-500x500.jpg"
+      ],
+      "rental": 809,
+      "deposit": 1259,
+      "days": 4,
+      "rent_months": 3,
+      "wishlist": false,
+      "quantity": 4,
+      "category": "bedroom"
     }
   ],
   "furniture": [
@@ -684,7 +771,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 24,
@@ -713,7 +800,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 25,
@@ -741,7 +828,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 26,
@@ -772,7 +859,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 27,
@@ -799,7 +886,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 28,
@@ -829,7 +916,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 29,
@@ -856,7 +943,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 30,
@@ -882,7 +969,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 31,
@@ -909,7 +996,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 32,
@@ -938,7 +1025,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 33,
@@ -965,7 +1052,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 34,
@@ -993,7 +1080,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 35,
@@ -1023,7 +1110,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "livingroom"
+      "category": "living room"
     },
     {
       "id": 36,
@@ -1052,7 +1139,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "babyfurniture"
+      "category": "baby furniture"
     },
     {
       "id": 37,
@@ -1083,7 +1170,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "babyfurniture"
+      "category": "baby furniture"
     },
     {
       "id": 38,
@@ -1115,7 +1202,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "babyfurniture"
+      "category": "baby furniture"
     },
     {
       "id": 39,
@@ -1144,7 +1231,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "babyfurniture"
+      "category": "baby furniture"
     },
     {
       "id": 40,
@@ -1174,7 +1261,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "babyfurniture"
+      "category": "baby furniture"
     },
     {
       "id": 50,
@@ -1203,7 +1290,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "diningtable"
+      "category": "dining table"
     },
     {
       "id": 51,
@@ -1237,7 +1324,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "diningtable"
+      "category": "dining table"
     },
     {
       "id": 52,
@@ -1268,7 +1355,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "diningtable"
+      "category": "dining table"
     },
     {
       "id": 53,
@@ -1292,7 +1379,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "diningtable"
+      "category": "dining table"
     },
     {
       "id": 54,
@@ -1324,7 +1411,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "diningtable"
+      "category": "dining table"
     },
     {
       "id": 55,
@@ -1352,7 +1439,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 4,
-      "category": "diningtable"
+      "category": "dining table"
     },
     {
       "id": 55,
@@ -1383,7 +1470,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 4,
-      "category": "workfromhome"
+      "category": "work from home"
     },
     {
       "id": 56,
@@ -1412,7 +1499,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 4,
-      "category": "workfromhome"
+      "category": "work from home"
     },
     {
       "id": 56,
@@ -1441,7 +1528,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "workfromhome"
+      "category": "work from home"
     },
     {
       "id": 57,
@@ -1470,7 +1557,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "workfromhome"
+      "category": "work from home"
     },
     {
       "id": 58,
@@ -1499,7 +1586,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 2,
-      "category": "workfromhome"
+      "category": "work from home"
     },
     {
       "id": 59,
@@ -1526,7 +1613,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "workfromhome"
+      "category": "work from home"
     },
     {
       "id": 60,
@@ -1553,7 +1640,7 @@
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "workfromhome"
+      "category": "work from home"
     }
   ],
   "category_Furniture": [
@@ -1563,19 +1650,19 @@
     },
     {
       "image": "https://www.rentomojo.com/public/images/category/package-bg/living-room-v2.jpg",
-      "name": "Living Room"
+      "name": "living room"
     },
     {
       "image": "https://www.rentomojo.com/public/images/category/package-bg/study-room-v1.jpg",
-      "name": "Work From Home(WFH)"
+      "name": "work from home"
     },
     {
       "image": "https://www.rentomojo.com/public/images/category/package-bg/dining-v1.jpg",
-      "name": "Kitchen & Dinning"
+      "name": "dinning table"
     },
     {
       "image": "https://www.rentomojo.com/public/images/category/package-bg/baby-furniture.jpg",
-      "name": "babyfurniture"
+      "name": "baby furniture"
     }
   ],
   "category_Appliances": [
@@ -1650,6 +1737,36 @@
     {
       "image": "https://www.rentomojo.com/public/images/category/fitness/massagers.png",
       "name": "Massagers"
+    }
+  ],
+  "category_Packages": [
+    {
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/bedroom-v1_new.jpg",
+      "name": "Bedroom"
+    },
+    {
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/living-room-v2.jpg",
+      "name": "Living Room"
+    },
+    {
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/appliances.jpg",
+      "name": "Appliances"
+    },
+    {
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/study-room-v1.jpg",
+      "name": "work from home"
+    },
+    {
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/dining-v1.jpg",
+      "name": "Kitchen & Dining"
+    },
+    {
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/smart-packages.jpg",
+      "name": "Smart Home"
+    },
+    {
+      "image": "https://www.rentomojo.com/public/images/category/package-bg/fitness-packages.jpg",
+      "name": "Fitness & Exercises"
     }
   ]
 }
