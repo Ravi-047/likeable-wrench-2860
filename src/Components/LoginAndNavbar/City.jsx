@@ -7,7 +7,7 @@ function City({ cityData, onClose }) {
             {
                 cityData.map((item) => {
                     return (
-                        <SideCart item={item} onModalClose={onClose} />
+                        <SideCart key={item.id} item={item} onModalClose={onClose} />
                     )
                 })
             }

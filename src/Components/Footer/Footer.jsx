@@ -10,6 +10,10 @@ import {
   FaDribbble,
 } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
+import { IoIosPaperPlane } from "react-icons/io";
+import android from "../../Assets/android.png";
+import ios from "../../Assets/ios.png";
+
 const Footer = () => {
   return (
     <div>
@@ -119,6 +123,27 @@ const Footer = () => {
 
             <div>
               <h3>NEED HELP ?</h3>
+              <div className={styles.chat__option}>
+                <button>Chat with us (9AM - 6PM)</button>
+              </div>
+              <div className={styles.__mail_rento__}>
+                <a
+                  href="mailto:rento@firstrento.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IoIosPaperPlane /> rento@firstrento.com
+                </a>
+              </div>
+              <h3>DOWNLOAD APP</h3>
+              <div className={styles.__store_anios}>
+                <div>
+                  <a href="https://play.google.com/store/apps/details?id=com.rentomojo&_branch_match_id=1102421458398081161&utm_source=automation&utm_campaign=App%20Download&utm_medium=Website&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL8rNz8rXy8zTL3ILTfYKK052jAQA4IGbfRsAAAA%3D" target="_blank" rel="noopener noreferrer">  <img src={android} alt="android" /> </a>
+                </div>
+                <div>
+                  <a href="https://apps.apple.com/in/app/rentomojo-products-on-rent/id1404801676?_branch_match_id=1102421458398081161&utm_source=automation&utm_campaign=App%20Download&utm_medium=Website&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL8rNz8rXy8zTNyu1MM8wL3bzigIAWVRPyxsAAAA%3D" target="_blank" rel="noopener noreferrer"> <img src={ios} alt="ios" /></a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -128,26 +153,40 @@ const Footer = () => {
             <div>© 2022. Edunetwork Pvt. Ltd.</div>
             <div className={styles.__social__icons__}>
               <span>
-                <FaFacebookF />
+                <a target="_blank" href="https://www.facebook.com/rentomojo"  >
+                  <FaFacebookF />
+                </a>
               </span>
               <span>
-                <FaTwitter />
+                <a target="_blank" href="https://twitter.com/rentomojo">
+                  <FaTwitter />
+                </a>
               </span>
               <span>
-                <FaLinkedinIn />
+                <a target="_blank" href="https://www.linkedin.com/company/rentomojo/">
+                  <FaLinkedinIn />
+                </a>
               </span>
               <span>
-                <FaYoutube />
+                <a target="_blank" href="https://www.youtube.com/c/RentomojoOfficial">
+                  <FaYoutube />
+                </a>
               </span>
               <span>
-                <ImInstagram />
+                <a target="_blank" href="https://www.instagram.com/rentomojo/">
+                  <ImInstagram />
+                </a>
               </span>
               <span>
-                <FaDribbble />
+                <a target="_blank" href="https://dribbble.com/RentoMojo">
+                  <FaDribbble />
+                </a>
               </span>
             </div>
             <div>
-              Go Up <MdKeyboardArrowUp />
+              <button>
+                Go Up <MdKeyboardArrowUp />
+              </button>
             </div>
           </div>
         </div>

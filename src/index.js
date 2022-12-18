@@ -5,9 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
-
 import AuthContextProvider from "./Context/AuthContext";
+import { Provider } from "react-redux";
+import store from "./Redux/store";
 import CityContextProvider from "./Context/CityContext";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,9 +17,11 @@ root.render(
   <BrowserRouter>
     <ChakraProvider>
       <CityContextProvider>
-        <AuthContextProvider>
-          <App />
-        </AuthContextProvider>
+        <Provider store={store}>
+          <AuthContextProvider>
+            <App />
+          </AuthContextProvider>
+        </Provider>
       </CityContextProvider>
     </ChakraProvider>
   </BrowserRouter>
