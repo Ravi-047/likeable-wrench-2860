@@ -5,10 +5,12 @@
  <li>Ravi </li>
   <li>Ragini</li>
   <li>Malik</li>
- 
 </ol>
+
 ## Description
+
 <p> Hi! We’re First_Rent , an online rental solution for your furnishing needs.</p>
+<p> Whether you have a home or have just rented a room here, you’ll find everything you need on our website. We offer top-quality furniture, appliances, and electronics, made by the most dependable, in-demand brands around. If you choose to rent from us, you will receive multiple rewards like free maintenance, free relocation, and damage waiver.</p>
 <h1>lets have a look on the website pages </h1>
 <br>
 <li>
