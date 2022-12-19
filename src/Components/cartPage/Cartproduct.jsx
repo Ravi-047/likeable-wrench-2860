@@ -43,7 +43,6 @@ export const Cart = () => {
 
   return (
     <>
-      <Navbar />
       <div className="container">
         <div className="flexDiv">
           <div className="main">
