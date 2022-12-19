@@ -115,6 +115,65 @@
       "wishlist": false,
       "quantity": 4,
       "category": "bedroom"
+    },
+    {
+      "id": 22,
+      "title": "Filbert Chest of Drawers",
+      "image": "https://p.rmjo.in/moodShot/pu54xbzt-1024x512.jpg",
+      "description": "The Filbert chest of drawers can be paired with your bed, study area or even your living room. With great space, comes great quality. Organizing your essentials just got a whole lot easier!.",
+      "dimensions": "30&ldquo; L x 18&ldquo; B x 24&ldquo; H",
+      "color": "#645452",
+      "material": "Engineered wood",
+      "features_specs": [
+        "3 drawer configuration",
+        "Compact & handy",
+        "Wenge finish"
+      ],
+      "img_slide": [
+        "https://p.rmjo.in/productSquare/zwg60t0s-500x500.jpg",
+        "https://p.rmjo.in/productSquare/lty2oa3e-500x500.jpg",
+        "https://p.rmjo.in/productSquare/33wb1797-500x500.jpg",
+        "https://p.rmjo.in/productSquare/kz6638td-500x500.jpg",
+        "https://p.rmjo.in/productSquare/59ok7c0z-500x500.jpg",
+        "https://p.rmjo.in/productSquare/557mkihg-500x500.jpg"
+      ],
+      "rental": 239,
+      "deposit": 369,
+      "days": 4,
+      "rent_months": 3,
+      "wishlist": false,
+      "quantity": 5,
+      "category": "bedroom"
+    },
+    {
+      "id": 20,
+      "title": "Hutch 2-Door Wardrobe",
+      "image": "https://p.rmjo.in/moodShot/21bgcpb2-1024x512.jpg",
+      "description": "Smart and versatile wardrobe to neatly organize all your clothes and linen. Declutter you room now.",
+      "dimensions": "28&ldquo; L x 16.5&ldquo; B x 71&ldquo; H",
+      "color": "#645452",
+      "material": "Engineered wood",
+      "features_specs": [
+        "2 shelf confirguration",
+        "Hanger Rod Installed",
+        "Outside Lock installed",
+        "Rectangular Mirror"
+      ],
+      "img_slide": [
+        "https://p.rmjo.in/productSquare/01amf1pl-500x500.jpg",
+        "https://p.rmjo.in/productSquare/hyrc7vy0-500x500.jpg",
+        "https://p.rmjo.in/productSquare/v7lbjc6p-500x500.jpg",
+        "https://p.rmjo.in/productSquare/b0raoeas-500x500.jpg",
+        "https://p.rmjo.in/productSquare/7d8se0xv-500x500.jpg",
+        "https://p.rmjo.in/productSquare/s8c4sa0v-500x500.jpg"
+      ],
+      "rental": 419,
+      "deposit": 639,
+      "days": 4,
+      "rent_months": 3,
+      "wishlist": false,
+      "quantity": 5,
+      "category": "bedroom"
     }
   ],
   "furniture": [
