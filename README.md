@@ -8,6 +8,7 @@
  
 </ol>
 ## Description
+<p> Hi! We’re First_Rent , an online rental solution for your furnishing needs.</p>
 <h1>lets have a look on the website pages </h1>
 <br>
 <li>
@@ -20,6 +21,7 @@ Login and Sign up Feature </li>
  <img width="1063" alt="Screenshot 2022-12-19 at 1 51 02 AM" src="https://user-images.githubusercontent.com/110046267/208317583-b6985734-1e74-47d5-8957-f2d729d16646.png">
  
 <li> Product page with interactive scrollbars. </li> 
+<img width="1387" alt="Screenshot 2022-12-19 at 10 05 10 AM" src="https://user-images.githubusercontent.com/110046267/208348797-4b5c99c7-4a11-4213-af3d-e12da936d5ff.png">
 
 
 <li> Payment page </li>
