@@ -23,6 +23,13 @@ Login and Sign up Feature </li>
 
 <li> Payment page </li>
 
+<li> Admin Login page </li>
+<img width="1048" alt="Screenshot 2022-12-19 at 1 55 45 AM" src="https://user-images.githubusercontent.com/110046267/208317769-9fc6b9ec-8b79-45e1-b3ca-83411bf1acf8.png">
+
+<li>Admin Dasboard Page </li>
+
+<img width="1432" alt="Screenshot 2022-12-19 at 1 57 24 AM" src="https://user-images.githubusercontent.com/110046267/208317842-f3265b1b-7d18-48f7-83d7-a9510826c025.png">
+
 
 
 
