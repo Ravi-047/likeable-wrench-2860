@@ -10,12 +10,6 @@
 ## Description
 <h1>lets have a look on the website pages </h1>
 <br>
-
-
-
-
-# Features
-<br>
 <li>
 Dynamic Navbar with Search Input Box.</li>
 <img width="1431" alt="Screenshot 2022-12-19 at 1 29 26 AM" src="https://user-images.githubusercontent.com/110046267/208317423-83cbd9a4-0ff9-41d9-8dbb-3e7487c06f8f.png">
