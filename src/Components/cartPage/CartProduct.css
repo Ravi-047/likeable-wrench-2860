@@ -53,10 +53,11 @@
 
 .productsDiv {
     background-color: white;
-    width: 350px;
+    width: 400px;
     align-items: center;
     border-radius: 10px;
     padding: 10px;
+    /* border: 1px solid ; */
 }
 
 .couponInput {
@@ -85,17 +86,26 @@
 
 .fetchDiv {
     display: flex;
+    width: 500px;
+    /* border: 1px solid; */
 }
 
 .infoDiv {
-    /* display: flex; */
     padding: 10px;
     flex-wrap: wrap;
     font-size: 12px;
+    /* border: 1px solid; */
+    width: 250px;
 }
 
 .imgDiv {
-    width: 550px
+    width: 100px;
+    /* border: 1px solid red; */
+}
+
+.imgDiv>img {
+    width: 100%;
+    height: 100px;
 }
 
 .price {
@@ -104,17 +114,30 @@
     width: 230px;
 }
 
+.namebtn>p {
+    /* border: 1px solid; */
+    width: 200px;
+}
+
 .namebtn {
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
-    width: 230px;
+    width: 250px;
 }
 
 .Selector {
     display: flex;
     justify-content: space-between;
-    margin-left: 90px;
+    margin-left: 110px;
     width: 230px;
+}
+
+.ImportingDiv {
+    border: 1px solid;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .selectTag {
@@ -174,10 +197,15 @@
     font-weight: bold;
     padding-bottom: 70px;
 }
-.verification img{
-    height:190px
+
+.verification img {
+    height: 190px
 }
-.numberVerify {}
+
+.numberVerify {
+    /* border: 1px solid; */
+    display: flex;
+}
 
 .numberVerifyBtn {
     border: 1px solid;
@@ -194,6 +222,6 @@
     padding: 10px;
 }
 
-.Address_form{
+.Address_form {
     padding: 20px;
 }

@@ -2,22 +2,23 @@ import React from "react";
 
 import "./CartProduct.css"
 
-export const SingleProduct = () => {
-    return ( 
+export const SingleProduct = ({ prdctImg, Name, price, deposite }) => {
+    return (
         <div>
             <div className="fetchDiv">
                 <div className="imgDiv">
-                    <img src="https://p.rmjo.in/productSquare/bbqhhykq-500x500.jpg" alt="PRoduct Img" />
+                    <img src={prdctImg} alt="PRoduct Img" />
                 </div>
                 <div className="infoDiv">
-                    <div className="name&btn">
-                        <p></p>
+                    <div className="namebtn">
+                        <p> {Name} </p>
                         <img src="https://www.rentomojo.com/public/images/radical-cart/icons/delete__icon.svg" alt="delete" />
                     </div>
+                    <br></br>
                     <div className="price">
                         <p>Installation <br></br> ₹1 </p>
-                        <p>Rent <br></br> ₹1</p>
-                        <p>Deposite <br></br> ₹1</p>
+                        <p>Rent <br></br> ₹{price}</p>
+                        <p>Deposite <br></br> ₹{deposite}</p>
                     </div>
 
                 </div>
