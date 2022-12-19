@@ -183,10 +183,7 @@ function Product() {
                 border="1px solid #e6e6e6"
                 className="hoverproductbox"
               >
-                <Link
-                  to={`/${city}/${param}/${para}/${prod.id}`}
-                  target="_blank"
-                >
+                <Link to={`/${city}/${param}/${para}/${prod.id}`}>
                   <Box h="270px">
                     <Image
                       src={prod.image}

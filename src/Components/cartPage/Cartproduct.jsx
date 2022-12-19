@@ -18,7 +18,6 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
-import Navbar from "../LoginAndNavbar/Navbar";
 
 export const Cart = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -210,6 +209,7 @@ export const Cart = () => {
                       Name={el.title}
                       price={el.rental}
                       deposite={el.deposit}
+                      id={el.id}
                     />
                   );
                 })}
