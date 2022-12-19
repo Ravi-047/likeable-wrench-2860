@@ -1,5 +1,12 @@
 # First Rent (E-commerce website for renting home items )
 
+## Contributor
+<ol>
+ <li>Ravi </li>
+  <li>Ragini</li>
+  <li>Malik</li>
+ 
+</ol>
 ## Description
 <h1>lets have a look on the website pages </h1>
 <br>
