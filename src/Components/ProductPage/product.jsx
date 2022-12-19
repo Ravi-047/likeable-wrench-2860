@@ -15,6 +15,7 @@ import {
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
+  useToast,
 } from "@chakra-ui/react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
@@ -23,7 +24,7 @@ import { CiFilter } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
 import { CityContext } from "../../Context/CityContext";
 import Subnavbar from "./Subnavbar";
-import  "./category.css"
+import "./category.css";
 
 function Product() {
   const { city } = useContext(CityContext);
@@ -36,6 +37,7 @@ function Product() {
   // const [toggle,setToggle]=useState(true)
   const [sliderValue, setSliderValue] = useState(6);
   const [checkboxvalue, setCheckboxvalue] = useState(para);
+  const toast = useToast();
 
   const labelStyles = {
     mt: "2",
@@ -55,22 +57,30 @@ function Product() {
       .then((res) => setProddata(res.data));
   };
 
-  const checkboxhandler = (e,index) => {
-     console.log(index)
+  const checkboxhandler = (e, index) => {
+    console.log(index);
     setCheckboxvalue(e.target.value);
     // console.log(e.target.value);
   };
-  
+
   const Carthandler = (prod) => {
     // axios
     //   .get(`http://localhost:8080/furniture/${id}`)
     //   .then((res) => setItem(res.data));
     // setItem(prod)
     // console.log(prod)
+
+    toast({
+      position: "top",
+      title: "Item successfully Added to Cart",
+      status: "success",
+      duration: 9000,
+      isClosable: true,
+    });
+
     axios
       .post(`http://localhost:8080/cart`, prod)
       .then((res) => console.log(res.data));
-
   };
   useEffect(() => {
     getCat();
@@ -78,7 +88,7 @@ function Product() {
   }, [checkboxvalue]);
   return (
     <Box>
-      <Subnavbar/>
+      <Subnavbar />
       <Flex pr="8%" pl="8%" gap="3%">
         <Box w="30%" h="200px">
           <Flex mt="1rem" mb="1rem" justifyContent="space-between">
@@ -133,10 +143,14 @@ function Product() {
             <Text fontSize="lg" mb="1rem">
               PRODUCT TYPE
             </Text>
-            {catData.map((ele,index) => (
+            {catData.map((ele, index) => (
               <Flex mt="1rem">
                 {/* <Input type="radio"/> */}
-                <Checkbox textTransform="capitalize" onChange={(e)=>checkboxhandler(e,index)} value={ele.name}>
+                <Checkbox
+                  textTransform="capitalize"
+                  onChange={(e) => checkboxhandler(e, index)}
+                  value={ele.name}
+                >
                   {ele.name}
                 </Checkbox>
               </Flex>
@@ -154,7 +168,7 @@ function Product() {
         <Box w="100%" mb="250px">
           <Box p="0.8%" w="16%" mt="1rem" mb="1rem" bg="#FAFAFA">
             <Flex justifyContent="space-between">
-              <Text fontSize="lg" textTransform="capitalize" >
+              <Text fontSize="lg" textTransform="capitalize">
                 {para}
               </Text>
               <Link to={`/${city}/${param}`}>
@@ -164,13 +178,27 @@ function Product() {
           </Box>
           <SimpleGrid columns={[2, 2, 3]} columnGap="5%" rowGap="1%">
             {proddata.map((prod) => (
-              <Link to={`/${city}/${param}/${para}/${prod.id}`} target="_blank">
-                <Box bg="white" border="1px solid #e6e6e6" className="hoverproductbox">
-                  <Box h="270px" >
-                  <Image src={prod.image} w="100%" h="100%" objectFit="cover"  ></Image>
+              <Box
+                bg="white"
+                border="1px solid #e6e6e6"
+                className="hoverproductbox"
+              >
+                <Link
+                  to={`/${city}/${param}/${para}/${prod.id}`}
+                  target="_blank"
+                >
+                  <Box h="270px">
+                    <Image
+                      src={prod.image}
+                      w="100%"
+                      h="100%"
+                      objectFit="cover"
+                    ></Image>
                   </Box>
                   <Box p="5%">
-                    <Text fontSize="lg" textOverflow="ellipsis">{prod.title}</Text>
+                    <Text fontSize="lg" textOverflow="ellipsis">
+                      {prod.title}
+                    </Text>
                     <Divider
                       mt="3%"
                       mb="3%"
@@ -182,9 +210,20 @@ function Product() {
                       <Text>{prod.days} days</Text>
                     </Flex>
                   </Box>
-                  <Box className="hoverCartbutton" m="15px"><Link to="/"><Button w="100%" borderRadius="15px" onClick={()=>Carthandler(prod)} bg="none" border="1px solid skyblue" color="skyblue">Add to Cart</Button></Link></Box>
+                </Link>
+                <Box className="hoverCartbutton" m="15px">
+                  <Button
+                    w="100%"
+                    borderRadius="15px"
+                    onClick={() => Carthandler(prod)}
+                    bg="none"
+                    border="1px solid skyblue"
+                    color="skyblue"
+                  >
+                    Add to Cart
+                  </Button>
                 </Box>
-              </Link>
+              </Box>
             ))}
           </SimpleGrid>
         </Box>
