@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react"
 import "./CartProduct.css"
 import { SingleProduct } from "./SingleProduct"
@@ -6,6 +7,8 @@ import axios from "axios";
 import Navbar from "../LoginAndNavbar/Navbar";
 
 export const Cart = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
@@ -188,3 +191,4 @@ export const Cart = () => {
         </>
     )
 }
+

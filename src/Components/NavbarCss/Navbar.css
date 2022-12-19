@@ -76,10 +76,9 @@
   margin: auto;
 }
 
-.loginBtn:hover {
-  background-color: white;
-  border: 2px solid orangered;
-  color: black;
+.loginBtn {
+  color: white;
+  border-radius: 10px;
 }
 .profilebtn :hover {
   border: 1px solid orangered;
@@ -116,4 +115,64 @@
   margin: auto;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  /* .searchBox {
+    width: 300px;
+  }
+  .inputBox {
+    width: 300px;
+  }
+  .__location__none__ {
+    display: none;
+  }
+
+  .__cart_Text_none {
+    display: none;
+  } */
+
+  .__logo_none__ {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBox {
+    width: 300px;
+  }
+  .inputBox {
+    width: 300px;
+  }
+  /* .__location__none__ {
+    display: none;
+  } */
+
+  .__cart_Text_none {
+    display: none;
+  }
+
+  .__logo_none__ {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .searchBox {
+    width: 180px;
+  }
+  .inputBox {
+    width: 180px;
+  }
+  .__location__none__ {
+    display: none;
+  }
+
+  .__cart_Text_none {
+    display: none;
+  }
+
+  .__logo_none__ {
+    display: none;
+  }
 }

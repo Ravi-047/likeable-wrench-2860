@@ -34,8 +34,8 @@ function DrawerExample({ item, onModalClose }) {
     <>
       <div
         className="cityLogo"
-        leftIcon={<AddIcon />}
-        colorScheme="teal"
+        lefticon={<AddIcon />}
+        colorscheme="teal"
         onClick={() => {
           onOpen();
           applyCity(item.name);
