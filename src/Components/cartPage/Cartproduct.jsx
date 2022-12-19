@@ -33,11 +33,11 @@ export const Cart = () => {
       .catch((e) => console.log(e));
   }, []);
 
-  const handleVerify = () => {};
+  //   const handleVerify = () => {};
 
   let sum = 0;
   data.map((el) => {
-    sum += el.deposit;
+    return (sum += el.deposit);
   });
   console.log(sum);
 
