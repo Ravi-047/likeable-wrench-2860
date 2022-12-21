@@ -79,6 +79,7 @@
 .loginBtn {
   color: white;
   border-radius: 10px;
+  font-size: 12px;
 }
 .profilebtn :hover {
   border: 1px solid orangered;
@@ -175,4 +176,9 @@
   .__logo_none__ {
     display: none;
   }
+  /* .loginBtn{
+    width: 20px;
+    font-size: x-small;
+    /* content: "login"; */
+  /* } */ 
 }

@@ -1,93 +1,61 @@
 {
   "cart": [
     {
-      "id": 7,
-      "title": "Kipper Wooden Queen Bed (6x5)",
-      "image": "https://p.rmjo.in/moodShot/wrmpa6sj-1024x512.jpg",
-      "description": "Once you have the perfect comfy bed, your sleep just gets way better. With the Kipper Bed's versatile design, go rustic, contemporary or uber-chic and style your room the way you want.",
-      "dimensions": "75&ldquo; L x 63&ldquo; B x 10&ldquo; H",
-      "color": "#f7d6ab",
-      "material": "Solid Wood",
+      "id": 23,
+      "title": "Garfield Ottoman",
+      "image": "https://p.rmjo.in/moodShot/taycn9bm-1024x512.jpg",
+      "description": "Put up your feet and let your sofa have the perfect companion with the Garfield Ottoman. Use it as a footstool or spare seating to welcome guests, it'll match any decor or home seamlessly.",
+      "dimensions": "22&ldquo; L x 22&ldquo; B x 15&ldquo; H",
+      "color": "#696b67",
+      "material": "Solid  wood",
       "features_specs": [
-        "Made using solid wood",
-        "Sturdy & stable",
-        "Slatted headboard, Versatile design",
-        "Footboard height: 10.5&ldquo;",
-        "To fit Mattress Size: 72&ldquo; L x 60&ldquo; B"
+        "Upholstered seat",
+        "Rubberwood support legs",
+        "Brown Oak finish"
       ],
       "img_slide": [
-        "https://p.rmjo.in/productSquare/d4pyi30g-500x500.jpg",
-        "https://p.rmjo.in/productSquare/00jslqvb-500x500.jpg",
-        "https://p.rmjo.in/productSquare/tsd9eexe-500x500.jpg",
-        "https://p.rmjo.in/productSquare/f8gg0p08-500x500.jpg",
-        "https://p.rmjo.in/productSquare/ks8igd99-500x500.jpg"
+        "https://p.rmjo.in/productSquare/9o9eoir3-500x500.jpg",
+        "https://p.rmjo.in/productSquare/jy2bbe9f-500x500.jpg",
+        "https://p.rmjo.in/productSquare/uqtut16j-500x500.jpg",
+        "https://p.rmjo.in/productSquare/xmhqiirr-500x500.jpg"
       ],
-      "rental": 809,
-      "deposit": 1259,
-      "days": 4,
-      "rent_months": 3,
-      "wishlist": false,
-      "quantity": 4,
-      "category": "bedroom"
-    },
-    {
-      "id": 22,
-      "title": "Filbert Chest of Drawers",
-      "image": "https://p.rmjo.in/moodShot/pu54xbzt-1024x512.jpg",
-      "description": "The Filbert chest of drawers can be paired with your bed, study area or even your living room. With great space, comes great quality. Organizing your essentials just got a whole lot easier!.",
-      "dimensions": "30&ldquo; L x 18&ldquo; B x 24&ldquo; H",
-      "color": "#645452",
-      "material": "Engineered wood",
-      "features_specs": [
-        "3 drawer configuration",
-        "Compact & handy",
-        "Wenge finish"
-      ],
-      "img_slide": [
-        "https://p.rmjo.in/productSquare/zwg60t0s-500x500.jpg",
-        "https://p.rmjo.in/productSquare/lty2oa3e-500x500.jpg",
-        "https://p.rmjo.in/productSquare/33wb1797-500x500.jpg",
-        "https://p.rmjo.in/productSquare/kz6638td-500x500.jpg",
-        "https://p.rmjo.in/productSquare/59ok7c0z-500x500.jpg",
-        "https://p.rmjo.in/productSquare/557mkihg-500x500.jpg"
-      ],
-      "rental": 239,
-      "deposit": 369,
+      "rental": 189,
+      "deposit": 299,
       "days": 4,
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "bedroom"
+      "category": "living room"
     },
     {
-      "id": 20,
-      "title": "Hutch 2-Door Wardrobe",
-      "image": "https://p.rmjo.in/moodShot/21bgcpb2-1024x512.jpg",
-      "description": "Smart and versatile wardrobe to neatly organize all your clothes and linen. Declutter you room now.",
-      "dimensions": "28&ldquo; L x 16.5&ldquo; B x 71&ldquo; H",
-      "color": "#645452",
-      "material": "Engineered wood",
+      "id": 28,
+      "title": "Robin Futon Blue Small",
+      "image": "https://p.rmjo.in/moodShot/jmid2u8q-1024x512.jpg",
+      "description": "Whether you want to watch a movie with your friends or catch a good night's sleep, the Robin futon lets you have it all. Oh and did we mention that you can use it as a lounger, a bed and a sofa.",
+      "dimensions": "72&ldquo; L x 36&ldquo; B x 6&ldquo; H",
+      "color": "#184b8e",
+      "material": "Engineered Wood",
       "features_specs": [
-        "2 shelf confirguration",
-        "Hanger Rod Installed",
-        "Outside Lock installed",
-        "Rectangular Mirror"
+        "Soft wool cushioning",
+        "Easliy foldable",
+        "Low set foldable futon",
+        "After Folding LxBxH: 30&ldquo; x 36&ldquo; x 30&ldquo;",
+        "Mattress will add height upto 5&ldquo;"
       ],
       "img_slide": [
-        "https://p.rmjo.in/productSquare/01amf1pl-500x500.jpg",
-        "https://p.rmjo.in/productSquare/hyrc7vy0-500x500.jpg",
-        "https://p.rmjo.in/productSquare/v7lbjc6p-500x500.jpg",
-        "https://p.rmjo.in/productSquare/b0raoeas-500x500.jpg",
-        "https://p.rmjo.in/productSquare/7d8se0xv-500x500.jpg",
-        "https://p.rmjo.in/productSquare/s8c4sa0v-500x500.jpg"
+        "https://p.rmjo.in/productSquare/nebda0pf-500x500.jpg",
+        "https://p.rmjo.in/productSquare/idqek3nd-500x500.jpg",
+        "https://p.rmjo.in/productSquare/qjf1usbb-500x500.jpg",
+        "https://p.rmjo.in/productSquare/45fn8stu-500x500.jpg",
+        "https://p.rmjo.in/productSquare/iq2b9wqu-500x500.jpg"
       ],
-      "rental": 419,
-      "deposit": 639,
+      "rental": 369,
+      "deposit": 569,
       "days": 4,
       "rent_months": 3,
       "wishlist": false,
       "quantity": 5,
-      "category": "bedroom"
+      "category": "living room"
     }
   ],
   "furniture": [

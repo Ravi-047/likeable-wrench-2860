@@ -28,7 +28,7 @@ const Navbar = () => {
   const { city } = useContext(CityContext);
   const [cartItem, setCartItem] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const [result, setResult] = React.useState([]);
+  const [result, setResult] = useState([]);
   const navigate = useNavigate();
   const options = [
     { value: "bed", label: "Bed" },
@@ -42,10 +42,10 @@ const Navbar = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/Cart")
+      .get("http://localhost:8080/cart")
       .then((res) => setCartItem(res.data))
       .catch((err) => console.log(err));
-  }, []);
+  }, [cartItem]);
 
   const changeHandler = (e, options) => {
     let val = e.target.value;
@@ -142,38 +142,61 @@ const Navbar = () => {
               <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                 <Flex>
                   {" "}
-                  <FaShoppingCart /> <Text> Cart</Text>{" "}
+                  <FaShoppingCart /> <Text className="__cart_Text_none" > Cart</Text>{" "}
                 </Flex>
               </MenuButton>
-              <MenuList>
-                <MenuItem minH="70px" width="200px">
+              <MenuList h="120px" overflowY="auto">
+                {/* <MenuItem minH="70px" width="200px">
                   <Image
                     boxSize="2rem"
                     borderRadius="full"
-                    src={cartItem[cartItem.length - 1].image}
+                    src="hello2"
+                    // {cartItem[cartItem.length - 1].image}
                     alt="Fluffybuns the destroyer"
                     mr="12px"
                   />
                   <span style={{ textOverflow: "ellipsis" }}>
-                    {cartItem[cartItem.length - 1].title}
-                  </span>
-                </MenuItem>
-                <MenuItem minH="70px" width="200px">
+                    {/* "hello1" */}
+                    {/* {cartItem[cartItem.length - 1].title} */}
+                  {/* </span> */}
+                {/* </MenuItem>  */}
+                {cartItem.map((item)=>(
+                   <MenuItem minH="70px" width="200px" >
+                   <Image
+                     boxSize="2rem"
+                     borderRadius="full"
+                     src={item.image}
+                     alt="Fluffybuns the destroyer"
+                     mr="12px"
+                   />
+                   <span style={{ textOverflow: "ellipsis" }}>
+                     {item.title}
+                     {/* {cartItem[cartItem.length - 1].title} */}
+                   </span>
+                 </MenuItem>
+
+                ))}
+                {/* <MenuItem minH="70px" width="200px">
                   <Image
                     boxSize="2rem"
                     borderRadius="full"
-                    src={cartItem[cartItem.length - 2].image}
+                    src=""
+                    // {cartItem[cartItem.length - 2].image}
                     alt="Simon the pensive"
                     mr="12px"
                   />
                   <span style={{ textOverflow: "ellipsis" }}>
-                    {cartItem[cartItem.length - 2].title}
-                  </span>
-                </MenuItem>
+                    {/* "helo3" */}
+                    {/* {cartItem[cartItem.length - 2].title} */}
+                  {/* </span> */}
+                {/* </MenuItem>  */}
+                <MenuItem>
                 <Link to="/cart">
-                  <Button bg={"orangered"}>Go to Cart</Button>
+                  <Button bg={"orangered"} w="80%" m="auto">Go to Cart</Button>
                 </Link>
+                </MenuItem>
               </MenuList>
+             
             </Menu>
           )}
         </Box>
