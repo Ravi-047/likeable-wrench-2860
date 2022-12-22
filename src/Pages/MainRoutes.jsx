@@ -12,6 +12,7 @@ import AdminLogin from "../Components/Admin/AdminLogin";
 import AdminDashboard from "../Components/Admin/AdminDashboard";
 import Landing from "./Landing";
 import { Cart } from "../Components/cartPage/Cartproduct";
+import { Payment } from "../Components/cartPage/payment";
 const MainRoutes = () => {
   const location = "bangalore";
   return (
@@ -23,6 +24,7 @@ const MainRoutes = () => {
       <Route path={`/:${location}/:param/:para/:id`} element={<Checkout />} />
       <Route path="/blank" element={<BlankCart />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/cart/payment" element={<Payment />} />
       <Route path="/account" element={<Account />} />
       <Route path="/wishlist" element={<BlankWishList />} />
       <Route path="/setting" element={<SettingPage />} />
