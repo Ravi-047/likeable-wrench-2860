@@ -24,30 +24,30 @@ export const Cart = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const toast = useToast();
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const [data, setData] = useState([]);
 
-  const getcartdata=()=>{
+  const getcartdata = () => {
     axios
-    .get("http://localhost:8080/cart")
-    .then((res) => setData(res.data))
-    .catch((e) => console.log(e));
-  }
-  const deletehandler=(id)=>{
+      .get("http://localhost:8080/cart")
+      .then((res) => setData(res.data))
+      .catch((e) => console.log(e));
+  };
+  const deletehandler = (id) => {
     axios
       .delete(`http://localhost:8080/cart/${id}`)
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
-      getcartdata()
-  }
+    getcartdata();
+  };
 
-  const paymenthandler=()=>{
-    navigate("/cart/payment")
-  }
+  const paymenthandler = () => {
+    navigate("/cart/payment");
+  };
   useEffect(() => {
-    getcartdata()
-  }, [getcartdata]);
+    getcartdata();
+  }, []);
 
   //   const handleVerify = () => {};
 
@@ -194,7 +194,9 @@ export const Cart = () => {
                       <Button variant="outline" mr={3} onClick={onClose}>
                         Cancel
                       </Button>
-                      <Button colorScheme="blue" onClick={paymenthandler}>Complete Payment</Button>
+                      <Button colorScheme="blue" onClick={paymenthandler}>
+                        Complete Payment
+                      </Button>
                     </DrawerFooter>
                   </DrawerContent>
                 </Drawer>
@@ -219,63 +221,61 @@ export const Cart = () => {
               <p className="only">Only few left in stock. Hurry up!</p>
               <div className="ImportingDiv">
                 {data.map((el) => (
-                    <div>
-                      {/* <p>{el.title}</p>
+                  <div>
+                    {/* <p>{el.title}</p>
                       <button onClick={()=>deletehandler(el.id)}>delete</button>
                       </div>
                       <div> */}
-                      <div className="fetchDiv">
-                        <div className="imgDiv">
-                          <img src={el.image} alt="PRoduct Img" />
-                        </div>
-                        <div className="infoDiv">
-                          <div className="namebtn">
-                            <p> {el.title} </p>
-                            <img
-                              src="https://www.rentomojo.com/public/images/radical-cart/icons/delete__icon.svg"
-                              alt="delete"
-                              onClick={()=>deletehandler(el.id)}
-                            />
-                          </div>
-                          <br></br>
-                          <div className="price">
-                            <p>
-                              Installation <br></br> ₹1{" "}
-                            </p>
-                            <p>
-                              Rent <br></br> ₹{el.rental}
-                            </p>
-                            <p>
-                              Deposite <br></br> ₹{el.deposit}
-                            </p>
-                          </div>
-                        </div>
+                    <div className="fetchDiv">
+                      <div className="imgDiv">
+                        <img src={el.image} alt="PRoduct Img" />
                       </div>
-                      <div className="Selector">
-                        <select className="selectTag">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                        </select>
-                        <select className="selectTag">
-                          <option>1 Months</option>
-                          <option>2 Months</option>
-                          <option>3 Months</option>
-                        </select>
+                      <div className="infoDiv">
+                        <div className="namebtn">
+                          <p> {el.title} </p>
+                          <img
+                            src="https://www.rentomojo.com/public/images/radical-cart/icons/delete__icon.svg"
+                            alt="delete"
+                            onClick={() => deletehandler(el.id)}
+                          />
+                        </div>
+                        <br></br>
+                        <div className="price">
+                          <p>
+                            Installation <br></br> ₹1{" "}
+                          </p>
+                          <p>
+                            Rent <br></br> ₹{el.rental}
+                          </p>
+                          <p>
+                            Deposite <br></br> ₹{el.deposit}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  
+                    <div className="Selector">
+                      <select className="selectTag">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                      <select className="selectTag">
+                        <option>1 Months</option>
+                        <option>2 Months</option>
+                        <option>3 Months</option>
+                      </select>
+                    </div>
+                  </div>
 
-                    // <SingleProduct
-                    //   key={el.id}
-                    //   prdctImg={el.image}
-                    //   Name={el.title}
-                    //   price={el.rental}
-                    //   deposite={el.deposit}
-                    //   id={el.id}
-                    // />
-                  )
-                )}
+                  // <SingleProduct
+                  //   key={el.id}
+                  //   prdctImg={el.image}
+                  //   Name={el.title}
+                  //   price={el.rental}
+                  //   deposite={el.deposit}
+                  //   id={el.id}
+                  // />
+                ))}
               </div>
             </div>
           </div>

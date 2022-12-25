@@ -1,17 +1,15 @@
-
-.cathover{
-    
-    transition:0.4s
+.cathover {
+  transition: 0.4s;
 }
-.cathover:hover{
-    transform:translateY(-30px);
+.cathover:hover {
+  transform: translateY(-30px);
 }
-.hoverCartbutton{
-    display: none;
+.hoverCartbutton {
+  display: none;
 }
 /* .hoverCartbutton:hover{
    display: flex;
 } */
-.hoverproductbox:hover .hoverCartbutton{
+.hoverproductbox:hover .hoverCartbutton {
   display: block;
 }
