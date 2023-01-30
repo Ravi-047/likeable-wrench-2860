@@ -5,7 +5,8 @@ import "react-multi-carousel/lib/styles.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { CityContext } from "../../Context/CityContext";
-import { getProducts } from "../../Redux/action";
+import { getCarts } from "../../Redux/cart/action.cart";
+import { getProducts } from "../../Redux/furniture/action";
 
 import "./ProductCarousel.css";
 
@@ -32,11 +33,12 @@ const ProductCarousel = () => {
   };
 
   const dispatch = useDispatch();
-  const productData = useSelector((store) => store.products);
+  const productData = useSelector((store) => store.furniture.products);
 
   useEffect(() => {
     if (productData.length === 0) {
       dispatch(getProducts());
+      dispatch(getCarts());
     }
   }, [dispatch, productData.length]);
 

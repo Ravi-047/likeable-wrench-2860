@@ -1,14 +1,13 @@
-import axios from "axios";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteCarts } from "../../Redux/cart/action.cart";
 
 import "./CartProduct.css";
 
 export const SingleProduct = ({ prdctImg, Name, price, deposite, id }) => {
+  const dispatch = useDispatch();
   const handleDelete = () => {
-    axios
-      .delete(`http://localhost:8080/cart/${id}`)
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
+    dispatch(deleteCarts(id));
   };
 
   return (

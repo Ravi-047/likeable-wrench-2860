@@ -1,227 +1,232 @@
 .container {
-    background-color: #f5f7fa;
-    padding: 10px;
+  background-color: #f5f7fa;
+  padding: 10px;
 }
 
 .flexDiv {
-    display: flex;
-    width: 75%;
-    margin: auto;
-    justify-content: space-between;
+  display: flex;
+  width: 75%;
+  margin: auto;
+  justify-content: space-between;
 }
 
 .main {
-    width: 70%;
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px;
+  width: 70%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .CartPAge {
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  justify-content: space-between;
 }
 
 .paymentDiv {
-    border: 1px solid;
-    border-radius: 8px;
-    width: 330px;
-    font-size: 15px;
+  border: 1px solid;
+  border-radius: 8px;
+  width: 330px;
+  font-size: 15px;
 }
 
 .PayableNow {
-    font-weight: bold;
-    margin-left: 5px;
+  font-weight: bold;
+  margin-left: 5px;
 }
 
 .spaceBetweeen {
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
 }
 
 .coupon {
-    padding: 10px;
-    display: flex;
+  padding: 10px;
+  display: flex;
 }
 
 .productsDiv {
-    background-color: white;
-    width: 400px;
-    align-items: center;
-    border-radius: 10px;
-    padding: 10px;
-    /* border: 1px solid ; */
+  background-color: white;
+  width: 400px;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  /* border: 1px solid ; */
 }
 
 .couponInput {
-    border: 1px solid;
-    width: 185px;
-    margin: 5px;
-    font-size: 13px;
+  border: 1px solid black;
+  width: 185px;
+  margin: 5px;
+  padding-left: 10px;
+  font-size: 13px;
 }
 
 .couponBtn {
-    background-color: white;
-    border: 1px solid;
-    font-size: 12px;
-    padding: 2px;
-    margin: 5px;
+  background-color: white;
+  border: 1px solid black;
+  font-size: 12px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 4px;
 }
 
 .only {
-    padding: 2px;
-    font-size: 10px;
-    background: #dc3226;
-    border-radius: 5px;
-    color: white;
-    width: 160px;
+  padding: 2px;
+  font-size: 10px;
+  background: #dc3226;
+  border-radius: 5px;
+  color: white;
+  width: 160px;
 }
 
 .fetchDiv {
-    display: flex;
-    width: 500px;
-    /* border: 1px solid; */
+  display: flex;
+  width: 500px;
+  /* border: 1px solid; */
 }
 
 .infoDiv {
-    padding: 10px;
-    flex-wrap: wrap;
-    font-size: 12px;
-    /* border: 1px solid; */
-    width: 250px;
+  padding: 10px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  /* border: 1px solid; */
+  width: 250px;
 }
 
 .imgDiv {
-    width: 100px;
-    /* border: 1px solid red; */
+  width: 100px;
+  /* border: 1px solid red; */
 }
 
-.imgDiv>img {
-    width: 100%;
-    height: 100px;
+.imgDiv > img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
 }
 
 .price {
-    display: flex;
-    justify-content: space-between;
-    width: 230px;
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
 }
 
-.namebtn>p {
-    /* border: 1px solid; */
-    width: 200px;
+.namebtn > p {
+  /* border: 1px solid; */
+  width: 200px;
 }
 
 .namebtn {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    width: 250px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
 }
 
 .Selector {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 110px;
-    width: 230px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 110px;
+  width: 230px;
 }
 
 .ImportingDiv {
-    border: 1px solid;
-    margin: 5px;
-    border-radius: 10px;
-    padding: 5px;
+  border: 1px solid;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  overflow: hidden;
 }
 
 .selectTag {
-    border: 1px solid;
-    border-radius: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.ImportingDiv>div {
-    margin-top: 15px;
-    border-radius: 5px;
+.ImportingDiv > div {
+  margin-top: 15px;
+  border-radius: 5px;
 }
 
 .Big_btn_div {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #dc3226;
-    width: 300px;
-    font-size: 14px;
-    align-items: center;
-    color: white;
-    margin-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #dc3226;
+  width: 300px;
+  font-size: 14px;
+  align-items: center;
+  color: white;
+  margin-left: 5px;
 }
 
 .Big_btn_div2 {
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #dc3226;
-    width: 300px;
-    font-size: 14px;
-    align-items: center;
-    color: white;
-    /* margin-left: 5px; */
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #dc3226;
+  width: 300px;
+  font-size: 14px;
+  align-items: center;
+  color: white;
+  /* margin-left: 5px; */
 }
 
 .verificationFlex {
-    /* display: flex; */
-    width: 85%;
-    /* border: 1px solid; */
+  /* display: flex; */
+  width: 85%;
+  /* border: 1px solid; */
 }
 
 .verification {
-    margin-top: 50px;
-    display: flex;
-    margin-left: 5px;
-    height: 200px;
-    border: 1px solid rgb(171, 171, 171);
-    border-radius: 10px;
-    padding: 5px;
-    align-items: center;
+  margin-top: 50px;
+  display: flex;
+  margin-left: 5px;
+  height: 200px;
+  border: 1px solid rgb(171, 171, 171);
+  border-radius: 10px;
+  padding: 5px;
+  align-items: center;
 }
 
-.verificationFlex>h3 {
-    font-weight: bold;
-    padding-bottom: 70px;
+.verificationFlex > h3 {
+  font-weight: bold;
+  padding-bottom: 70px;
 }
 
 .verification img {
-    height: 190px
+  height: 190px;
 }
 
 .numberVerify {
-    /* border: 1px solid; */
-    display: flex;
+  /* border: 1px solid; */
+  display: flex;
 }
 
 .numberVerifyBtn {
-    border: 1px solid;
-    border-radius: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding: 10px;
-    margin-left: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 10px;
+  margin-left: 10px;
 }
 
 .numberVerifyInput {
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .Address_form {
-    padding: 20px;
+  padding: 20px;
 }

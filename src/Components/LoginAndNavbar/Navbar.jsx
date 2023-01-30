@@ -23,13 +23,15 @@ import "../NavbarCss/Navbar.css";
 import Otp from "./Otp";
 import Location from "./Location";
 import { FaShoppingCart } from "react-icons/fa";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getCarts } from "../../Redux/cart/action.cart";
 const Navbar = () => {
   const { city } = useContext(CityContext);
-  const [cartItem, setCartItem] = useState([]);
-  const [searchText, setSearchText] = useState("");
   const [result, setResult] = useState([]);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const cartItem = useSelector((store) => store.dataCart.carts);
+
   const options = [
     { value: "bed", label: "Bed" },
     { value: "furniture", label: "Furniture" },
@@ -41,15 +43,11 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/cart")
-      .then((res) => setCartItem(res.data))
-      .catch((err) => console.log(err));
-  }, [cartItem]);
+    dispatch(getCarts());
+  }, [dispatch]);
 
   const changeHandler = (e, options) => {
     let val = e.target.value;
-    setSearchText(val);
     let answer = options.filter((el) => {
       return el.value.toLowerCase().includes(val.toLowerCase());
     });
@@ -112,11 +110,12 @@ const Navbar = () => {
             </InputGroup>
           </VStack>
           <div className="overFlowDiv">
-            {result.map((ele) => {
+            {result.map((ele, index) => {
               return (
                 <p
                   style={{ cursor: "pointer" }}
                   onClick={() => searchBarNavigation(ele.value)}
+                  key={index}
                 >
                   {ele.label}
                 </p>
@@ -139,13 +138,14 @@ const Navbar = () => {
             </Link>
           ) : (
             <Menu>
-              <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+              <MenuButton as={Button} righticon={<ChevronDownIcon />}>
                 <Flex>
                   {" "}
-                  <FaShoppingCart /> <Text className="__cart_Text_none" > Cart</Text>{" "}
+                  <FaShoppingCart />{" "}
+                  <Text className="__cart_Text_none"> Cart</Text>{" "}
                 </Flex>
               </MenuButton>
-              <MenuList h="120px" overflowY="auto">
+              <MenuList h="300px" overflowY="auto">
                 {/* <MenuItem minH="70px" width="200px">
                   <Image
                     boxSize="2rem"
@@ -157,24 +157,23 @@ const Navbar = () => {
                   />
                   <span style={{ textOverflow: "ellipsis" }}>
                     {/* "hello1" */}
-                    {/* {cartItem[cartItem.length - 1].title} */}
-                  {/* </span> */}
+                {/* {cartItem[cartItem.length - 1].title} */}
+                {/* </span> */}
                 {/* </MenuItem>  */}
-                {cartItem.map((item)=>(
-                   <MenuItem minH="70px" width="200px" >
-                   <Image
-                     boxSize="2rem"
-                     borderRadius="full"
-                     src={item.image}
-                     alt="Fluffybuns the destroyer"
-                     mr="12px"
-                   />
-                   <span style={{ textOverflow: "ellipsis" }}>
-                     {item.title}
-                     {/* {cartItem[cartItem.length - 1].title} */}
-                   </span>
-                 </MenuItem>
-
+                {cartItem.map((item, index) => (
+                  <MenuItem minH="70px" width="200px" key={index}>
+                    <Image
+                      boxSize="2rem"
+                      borderRadius="full"
+                      src={item.image}
+                      alt="Fluffybuns the destroyer"
+                      mr="12px"
+                    />
+                    <span style={{ textOverflow: "ellipsis" }}>
+                      {item.title}
+                      {/* {cartItem[cartItem.length - 1].title} */}
+                    </span>
+                  </MenuItem>
                 ))}
                 {/* <MenuItem minH="70px" width="200px">
                   <Image
@@ -187,16 +186,17 @@ const Navbar = () => {
                   />
                   <span style={{ textOverflow: "ellipsis" }}>
                     {/* "helo3" */}
-                    {/* {cartItem[cartItem.length - 2].title} */}
-                  {/* </span> */}
+                {/* {cartItem[cartItem.length - 2].title} */}
+                {/* </span> */}
                 {/* </MenuItem>  */}
-                <MenuItem>
-                <Link to="/cart">
-                  <Button bg={"orangered"} w="80%" m="auto">Go to Cart</Button>
-                </Link>
+                <MenuItem style={{ justifyContent: "center" }}>
+                  <Link to="/cart">
+                    <Button bg={"orangered"} w="80%" m="0px">
+                      Go to Cart
+                    </Button>
+                  </Link>
                 </MenuItem>
               </MenuList>
-             
             </Menu>
           )}
         </Box>

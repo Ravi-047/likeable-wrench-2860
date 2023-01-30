@@ -1,21 +1,21 @@
 import {
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  Button,
-  Textarea,
-  FormLabel,
-  Box,
-  Select,
-  InputRightAddon,
-  Input,
-  InputLeftAddon,
-  InputGroup,
-  Stack,
+  // Drawer,
+  // DrawerBody,
+  // DrawerFooter,
+  // DrawerHeader,
+  // DrawerOverlay,
+  // DrawerContent,
+  // DrawerCloseButton,
+  // Button,
+  // Textarea,
+  // FormLabel,
+  // Box,
+  // Select,
+  // InputRightAddon,
+  // Input,
+  // InputLeftAddon,
+  // InputGroup,
+  // Stack,
   useDisclosure,
   Image,
 } from "@chakra-ui/react";
@@ -26,8 +26,8 @@ import { CityContext } from "../../Context/CityContext";
 import { useNavigate } from "react-router-dom";
 
 function DrawerExample({ item, onModalClose }) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const firstField = React.useRef();
+  const { onOpen } = useDisclosure();
+  // const firstField = React.useRef();
   const { applyCity } = useContext(CityContext);
   const navigate = useNavigate();
   return (
