@@ -13,6 +13,8 @@ import AdminDashboard from "../Components/Admin/AdminDashboard";
 import Landing from "./Landing";
 import { Cart } from "../Components/cartPage/Cartproduct";
 import { Payment } from "../Components/cartPage/payment";
+import Register from "./User/Register";
+import Login from "./User/Login";
 const MainRoutes = () => {
   const location = "bangalore";
   return (
@@ -22,6 +24,8 @@ const MainRoutes = () => {
       <Route path={`/:${location}/:param`} element={<Category />} />
       <Route path={`/:${location}/:param/:para`} element={<Product />} />
       <Route path={`/:${location}/:param/:para/:id`} element={<Checkout />} />
+      <Route path={`/:${location}/register`} element={<Register />} />
+      <Route path={`/:${location}/login`} element={<Login />} />
       <Route path="/blank" element={<BlankCart />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/cart/payment" element={<Payment />} />

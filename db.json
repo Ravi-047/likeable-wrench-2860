@@ -1,4 +1,46 @@
 {
+  "user": [
+    {
+      "username": "Ravi",
+      "email": "mohan@gmail.com",
+      "birthday": "2023-01-03",
+      "password": "Ravi@1999",
+      "confirmPassword": "Ravi@1999",
+      "id": 1
+    },
+    {
+      "username": "Ranjan",
+      "email": "ranjan@gmail.com",
+      "birthday": "2023-01-03",
+      "password": "Ravi@1999",
+      "confirmPassword": "Ravi@1999",
+      "id": 2
+    },
+    {
+      "username": "Ravi047",
+      "email": "ravi8@gmail.com",
+      "birthday": "2023-01-03",
+      "password": "Ranjan@1999",
+      "confirmPassword": "Ranjan@1999",
+      "id": 3
+    },
+    {
+      "username": "Ravi",
+      "email": "ravi@gmail.com",
+      "birthday": "2023-01-10",
+      "password": "Ravi@1999",
+      "confirmPassword": "Ravi@1999",
+      "id": 4
+    },
+    {
+      "username": "Ravi",
+      "email": "mohan@gmail.com",
+      "birthday": "2023-01-17",
+      "password": "Ranjan@1999",
+      "confirmPassword": "Ranjan@1999",
+      "id": 5
+    }
+  ],
   "cart": [
     {
       "id": 23,

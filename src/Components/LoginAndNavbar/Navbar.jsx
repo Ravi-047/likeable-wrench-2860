@@ -20,7 +20,6 @@ import { useContext } from "react";
 import { CityContext } from "../../Context/CityContext";
 import { HStack, Text } from "@chakra-ui/react";
 import "../NavbarCss/Navbar.css";
-import Otp from "./Otp";
 import Location from "./Location";
 import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,6 +30,10 @@ const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartItem = useSelector((store) => store.dataCart.carts);
+  const token = localStorage.getItem("token");
+  console.log(token);
+  const username = localStorage.getItem("username");
+  const [logout, setLogout] = useState(false);
 
   const options = [
     { value: "bed", label: "Bed" },
@@ -42,9 +45,14 @@ const Navbar = () => {
     { value: "Fitness", label: "Fitness" },
   ];
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setLogout(true);
+  };
+
   useEffect(() => {
     dispatch(getCarts());
-  }, [dispatch]);
+  }, [dispatch, token, logout]);
 
   const changeHandler = (e, options) => {
     let val = e.target.value;
@@ -202,7 +210,28 @@ const Navbar = () => {
         </Box>
 
         <Box>
-          <Otp />
+          {token ? (
+            <div
+              title="Logout"
+              style={{ cursor: "pointer" }}
+              onClick={handleLogout}
+            >
+              Welcome {username}
+            </div>
+          ) : (
+            <Link to={`/${city}/register`}>
+              <div
+                style={{
+                  border: "1px solid black",
+                  padding: "5px 3px",
+                  borderRadius: "4px",
+                }}
+                className="__login__signup__"
+              >
+                Login/Signup
+              </div>
+            </Link>
+          )}
         </Box>
       </HStack>
     </Box>
