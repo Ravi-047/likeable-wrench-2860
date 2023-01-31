@@ -14,12 +14,10 @@ import {
   ModalOverlay,
   Modal,
   useDisclosure,
-  Text,
   Image,
   Box,
 } from "@chakra-ui/react";
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import HoverProfile from "./HoverProfile";
 import "../NavbarCss/Navbar.css";
@@ -28,7 +26,7 @@ function Otp() {
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
   const [phone, setPhone] = useState("");
-  const [otp, setOtp] = useState("");
+  // const [otp, setOtp] = useState("");
   const [sendOtp, setSendOtp] = useState(false);
 
   const { isAuth, toggleAuth } = useContext(AuthContext);
@@ -40,9 +38,9 @@ function Otp() {
     setPhone(e.target.value);
   };
 
-  const otpHandler = (e) => {
-    setOtp(e.target.value);
-  };
+  // const otpHandler = (e) => {
+  //   setOtp(e.target.value);
+  // };
   const clickHandler = () => {
     setSendOtp(true);
     setPhone("");
@@ -110,11 +108,11 @@ function Otp() {
             LOGIN/SIGNUP
           </Button>
         ) : (
-          <Button>
+          <div>
             {/* add popup here */}
 
             <HoverProfile />
-          </Button>
+          </div>
         )}
         <Modal
           initialFocusRef={initialRef}

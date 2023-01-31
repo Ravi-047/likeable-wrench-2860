@@ -118,6 +118,15 @@
   justify-content: center;
 }
 
+.__login__signup__ {
+  background: tomato;
+  transition: 0.3s linear;
+}
+
+.__login__signup__:hover {
+  background-color: limegreen;
+}
+
 @media (max-width: 1024px) {
   /* .searchBox {
     width: 300px;
@@ -180,5 +189,5 @@
     width: 20px;
     font-size: x-small;
     /* content: "login"; */
-  /* } */ 
+  /* } */
 }

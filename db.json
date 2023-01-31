@@ -1,4 +1,46 @@
 {
+  "user": [
+    {
+      "username": "Ravi",
+      "email": "mohan@gmail.com",
+      "birthday": "2023-01-03",
+      "password": "Ravi@1999",
+      "confirmPassword": "Ravi@1999",
+      "id": 1
+    },
+    {
+      "username": "Ranjan",
+      "email": "ranjan@gmail.com",
+      "birthday": "2023-01-03",
+      "password": "Ravi@1999",
+      "confirmPassword": "Ravi@1999",
+      "id": 2
+    },
+    {
+      "username": "Ravi047",
+      "email": "ravi8@gmail.com",
+      "birthday": "2023-01-03",
+      "password": "Ranjan@1999",
+      "confirmPassword": "Ranjan@1999",
+      "id": 3
+    },
+    {
+      "username": "Ravi",
+      "email": "ravi@gmail.com",
+      "birthday": "2023-01-10",
+      "password": "Ravi@1999",
+      "confirmPassword": "Ravi@1999",
+      "id": 4
+    },
+    {
+      "username": "Ravi",
+      "email": "mohan@gmail.com",
+      "birthday": "2023-01-17",
+      "password": "Ranjan@1999",
+      "confirmPassword": "Ranjan@1999",
+      "id": 5
+    }
+  ],
   "cart": [
     {
       "id": 23,
@@ -28,29 +70,56 @@
       "category": "living room"
     },
     {
-      "id": 28,
-      "title": "Robin Futon Blue Small",
-      "image": "https://p.rmjo.in/moodShot/jmid2u8q-1024x512.jpg",
-      "description": "Whether you want to watch a movie with your friends or catch a good night's sleep, the Robin futon lets you have it all. Oh and did we mention that you can use it as a lounger, a bed and a sofa.",
-      "dimensions": "72&ldquo; L x 36&ldquo; B x 6&ldquo; H",
+      "id": 24,
+      "title": "Felix 1-Seater Fabric Sofa (Blue)",
+      "image": "https://p.rmjo.in/moodShot/x6rtmm7a-1024x512.jpg",
+      "description": "Elegance meets comfort with the plush Felix Couch. With unmatched comfort and endless options to deck it up, your couch crasher friends will love it, and so will you.",
+      "dimensions": "34&ldquo; L x 33&ldquo; B x 24&ldquo; H",
       "color": "#184b8e",
-      "material": "Engineered Wood",
+      "material": "Fabric",
       "features_specs": [
-        "Soft wool cushioning",
-        "Easliy foldable",
-        "Low set foldable futon",
-        "After Folding LxBxH: 30&ldquo; x 36&ldquo; x 30&ldquo;",
-        "Mattress will add height upto 5&ldquo;"
+        "Soft fabric cover",
+        "Seat cushion",
+        "Upholstered backrest cushion"
       ],
       "img_slide": [
-        "https://p.rmjo.in/productSquare/nebda0pf-500x500.jpg",
-        "https://p.rmjo.in/productSquare/idqek3nd-500x500.jpg",
-        "https://p.rmjo.in/productSquare/qjf1usbb-500x500.jpg",
-        "https://p.rmjo.in/productSquare/45fn8stu-500x500.jpg",
-        "https://p.rmjo.in/productSquare/iq2b9wqu-500x500.jpg"
+        "https://p.rmjo.in/productSquare/k5gwdcsp-500x500.jpg",
+        "https://p.rmjo.in/productSquare/753nzydk-500x500.jpg",
+        "https://p.rmjo.in/productSquare/rlau8nmo-500x500.jpg",
+        "https://p.rmjo.in/productSquare/aldhnzlq-500x500.jpg",
+        "https://p.rmjo.in/productSquare/mm5awyui-500x500.jpg",
+        "https://p.rmjo.in/productSquare/i8h5j54a-500x500.jpg"
       ],
-      "rental": 369,
-      "deposit": 569,
+      "rental": 379,
+      "deposit": 589,
+      "days": 4,
+      "rent_months": 3,
+      "wishlist": false,
+      "quantity": 5,
+      "category": "living room"
+    },
+    {
+      "id": 25,
+      "title": "Rex 1-Seater Leather Sofa (Black)",
+      "image": "https://p.rmjo.in/moodShot/kd02zb0v-1024x512.jpg",
+      "description": "Meet Rex, the couch that's here to redefine class. If you're looking for a chance treat yourself (and your living room) with a bit of luxury, get the Rex. Best part? It matches any home decor.",
+      "dimensions": "32&ldquo; L x 27&ldquo; B x 32&ldquo; H",
+      "color": "#000000",
+      "material": "Art Leather",
+      "features_specs": [
+        "Leatherette covering",
+        "Foam filling"
+      ],
+      "img_slide": [
+        "https://p.rmjo.in/productSquare/6jks7lk8-500x500.jpg",
+        "https://p.rmjo.in/productSquare/eqg3o64h-500x500.jpg",
+        "https://p.rmjo.in/productSquare/zpnjj78n-500x500.jpg",
+        "https://p.rmjo.in/productSquare/43gu7t2c-500x500.jpg",
+        "https://p.rmjo.in/productSquare/kxhqtlt0-500x500.jpg",
+        "https://p.rmjo.in/productSquare/7cq01jne-500x500.jpg"
+      ],
+      "rental": 319,
+      "deposit": 489,
       "days": 4,
       "rent_months": 3,
       "wishlist": false,
