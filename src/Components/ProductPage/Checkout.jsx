@@ -13,6 +13,7 @@ import {
   SliderThumb,
   UnorderedList,
   ListItem,
+  useToast,
 } from "@chakra-ui/react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
@@ -25,6 +26,7 @@ import { useDispatch } from "react-redux";
 import { addCarts } from "../../Redux/cart/action.cart";
 
 function Checkout() {
+  const toast = useToast();
   const { id } = useParams();
   const [item, setItem] = useState([]);
   const [sliderValue, setSliderValue] = useState(6);
@@ -34,6 +36,13 @@ function Checkout() {
   const [loading, setLoading] = useState(false);
 
   const Carthandler = () => {
+    toast({
+      title: "Added to Cart",
+      description: "Item added to cart successfully",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
     setToggle(false);
     dispatch(addCarts(item));
   };

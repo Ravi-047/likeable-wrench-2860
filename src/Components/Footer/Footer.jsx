@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Footer.module.css";
-import { MdKeyboardArrowRight, MdKeyboardArrowUp } from "react-icons/md";
+import { MdKeyboardArrowUp } from "react-icons/md";
 import { Link } from "react-router-dom";
 import {
   FaFacebookF,
@@ -37,6 +37,7 @@ const Footer = () => {
   const goToUp = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
+
   return (
     <div>
       <div className={styles.___main__footer__}>
@@ -73,9 +74,9 @@ const Footer = () => {
             Agara.
           </p>
           <div></div>
-          <button className={styles.__read__more__}>
+          {/* <button className={styles.__read__more__}>
             Read More <MdKeyboardArrowRight />
-          </button>
+          </button> */}
 
           <div className={styles.__site__info__}>
             <div>
@@ -235,7 +236,6 @@ const Footer = () => {
                   <div>
                     <img src={ios} alt="ios" />
                   </div>
-             
                 </div>
               </div>
             </div>
@@ -247,32 +247,56 @@ const Footer = () => {
             <div>© 2022. Edunetwork Pvt. Ltd.</div>
             <div className={styles.__social__icons__}>
               <span>
-                <a target="_blank" href="https://www.facebook.com/rentomojo"  >
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/rentomojo"
+                  rel="noreferrer"
+                >
                   <FaFacebookF />
                 </a>
               </span>
               <span>
-                <a target="_blank" href="https://twitter.com/rentomojo">
+                <a
+                  target="_blank"
+                  href="https://twitter.com/rentomojo"
+                  rel="noreferrer"
+                >
                   <FaTwitter />
                 </a>
               </span>
               <span>
-                <a target="_blank" href="https://www.linkedin.com/company/rentomojo/">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/rentomojo/"
+                  rel="noreferrer"
+                >
                   <FaLinkedinIn />
                 </a>
               </span>
               <span>
-                <a target="_blank" href="https://www.youtube.com/c/RentomojoOfficial">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/c/RentomojoOfficial"
+                  rel="noreferrer"
+                >
                   <FaYoutube />
                 </a>
               </span>
               <span>
-                <a target="_blank" href="https://www.instagram.com/rentomojo/">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/rentomojo/"
+                  rel="noreferrer"
+                >
                   <ImInstagram />
                 </a>
               </span>
               <span>
-                <a target="_blank" href="https://dribbble.com/RentoMojo">
+                <a
+                  target="_blank"
+                  href="https://dribbble.com/RentoMojo"
+                  rel="noreferrer"
+                >
                   <FaDribbble />
                 </a>
               </span>

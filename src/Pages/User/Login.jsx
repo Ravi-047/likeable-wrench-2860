@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useToast } from "@chakra-ui/react";
+import React, { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { CityContext } from "../../Context/CityContext";
 import { loginUser } from "../../Redux/userauth/action.userauth";
 import "./forminput.css";
 import "./register.css";
 
 const Login = () => {
+  const toast = useToast();
+  const { city } = useContext(CityContext);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -18,8 +22,6 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const userExists = userData.find((item) => item.email === values.email);
-    console.log(values);
-    console.log(userData);
     if (userExists.email === values.email) {
       if (userExists.password === values.password) {
         const randomToken =
@@ -27,13 +29,31 @@ const Login = () => {
           Math.random().toString(36).substring(2, 15);
         localStorage.setItem("token", randomToken);
         localStorage.setItem("username", userExists.username);
-        alert("login successful");
+        toast({
+          title: "Login Successfull",
+          description: `Welcome ${userExists.username} to Our Home`,
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
         navigate("/");
       } else {
-        alert("Please Enter Correct Password");
+        toast({
+          title: "Password",
+          description: "Please enter your correct password",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
       }
     } else {
-      alert("Please Enter Correct Email");
+      toast({
+        title: "Email",
+        description: "Please enter your correct Email",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
     }
   };
 
@@ -54,7 +74,7 @@ const Login = () => {
           name="email"
           value={values.email}
           onChange={handleChange}
-          required="true"
+          required
         />
         <label>Password</label>
         <input
@@ -62,10 +82,19 @@ const Login = () => {
           name="password"
           value={values.password}
           onChange={handleChange}
-          required="true"
+          required
         />
         <button>Submit</button>
       </form>
+      <p className="__no__account__">
+        No Account, want to create{" "}
+        <Link
+          to={`/${city}/register`}
+          style={{ textDecoration: "underline", color: "blue" }}
+        >
+          Register here
+        </Link>
+      </p>
     </div>
   );
 };

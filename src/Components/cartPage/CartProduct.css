@@ -85,6 +85,7 @@
   border-radius: 5px;
   color: white;
   width: 160px;
+  margin-left: 15px;
 }
 
 .fetchDiv {
@@ -138,7 +139,6 @@
 }
 
 .ImportingDiv {
-  border: 1px solid;
   margin: 5px;
   border-radius: 10px;
   padding: 5px;

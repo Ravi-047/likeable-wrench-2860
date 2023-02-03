@@ -28,3 +28,27 @@
 .__register_form__ > form > button:hover {
   background-color: lightgreen;
 }
+
+@media (max-width: 1024px) {
+  .__register_form__ {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .__register_form__ {
+    width: 60%;
+  }
+}
+
+@media (max-width: 425px) {
+  .__register_form__ {
+    width: 85%;
+  }
+}
+
+@media (max-width: 375px) {
+  .__register_form__ {
+    width: 95%;
+  }
+}

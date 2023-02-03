@@ -10,6 +10,7 @@ const initialState = {
 const reducerAuth = (state = initialState, action) => {
     const { type, payload } = action;
     switch (type) {
+
         //Register user
         case types.REGISTER_REQUEST: {
             return { ...state, isLoading: true };

@@ -3,13 +3,10 @@ import {
   SimpleGrid,
   Image,
   Button,
-  Heading,
   Text,
   Flex,
   Divider,
-  Icon,
   Slider,
-  Input,
   Checkbox,
   SliderMark,
   SliderTrack,
@@ -65,6 +62,7 @@ function Product() {
       isClosable: true,
     });
   };
+
   useEffect(() => {
     setLoading(true);
     (() => {

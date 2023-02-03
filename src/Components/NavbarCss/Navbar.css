@@ -108,7 +108,8 @@
 .blankCartimg {
   width: 70%;
   margin-top: 100px;
-  margin-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .cnt {
   display: flex;
@@ -125,6 +126,22 @@
 
 .__login__signup__:hover {
   background-color: limegreen;
+}
+
+.__cart___data____ {
+  position: relative;
+}
+
+._cart__counting_ {
+  position: absolute;
+  border-radius: 50%;
+  top: 0px;
+  right: 0px;
+  font-size: 14px;
+  background-color: tomato;
+  color: black;
+  font-weight: bold;
+  padding: 2px 5px;
 }
 
 @media (max-width: 1024px) {
