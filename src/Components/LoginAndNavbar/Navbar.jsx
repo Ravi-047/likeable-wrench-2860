@@ -49,6 +49,9 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("a_verifyid");
+    localStorage.removeItem("username");
+
     setLogout(true);
     toast({
       position: "top",

@@ -19,7 +19,6 @@ import Sucess from "../Components/cartPage/Sucess";
 
 const MainRoutes = () => {
   const token = localStorage.getItem("token");
-  console.log(token, "main routes");
   const location = "bangalore";
   return (
     <Routes>

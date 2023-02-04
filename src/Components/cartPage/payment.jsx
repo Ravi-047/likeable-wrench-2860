@@ -4,10 +4,14 @@ import chip from "./image/chip.png";
 import visa from "./image/visa.png";
 import { useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteCarts } from "../../Redux/cart/action.cart";
 
 export const Payment = () => {
   const toast = useToast();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const data = useSelector((store) => store.dataCart.carts);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,7 +28,10 @@ export const Payment = () => {
       navigate("/paymentsucess");
     }, 1000);
 
-    return null;
+    for (let i = 0; i < data.length; i++) {
+      console.log(data[i].id);
+      dispatch(deleteCarts(data[i].id));
+    }
   };
 
   return (
