@@ -295,14 +295,26 @@ const HomePage = () => {
 
       <div className={styles.allCategoty}>
         {category_arr.map(({ id, icon, name }) => (
-          <Link
-            to={`/${city}/${name}`}
-            key={id}
-            className={styles.eachCategory}
+          <div
+            title={
+              name === "Furniture"
+                ? "Click to Check the Furniture Product"
+                : "No Product, we are scaling our inventory"
+            }
           >
-            <div>{icon}</div>
-            <p>{name}</p>
-          </Link>
+            <Link
+              to={`/${city}/${name}`}
+              key={id}
+              className={
+                name === "Furniture"
+                  ? styles.__furniture__
+                  : styles.eachCategory
+              }
+            >
+              <div>{icon}</div>
+              <p>{name}</p>
+            </Link>
+          </div>
         ))}
       </div>
 
