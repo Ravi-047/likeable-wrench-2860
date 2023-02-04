@@ -61,6 +61,8 @@
   border-radius: 10px;
   transition: 0.3s;
   cursor: pointer;
+  pointer-events: none;
+  cursor: default;
 }
 
 .eachCategory:hover {
@@ -169,6 +171,19 @@
 }
 
 /* responsive  */
+
+.__furniture__ {
+  width: 100%;
+  padding: 15px 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e2eaf0;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.831) 0px 5px 15px;
+}
 
 @media (max-width: 1024px) {
   .covid_sen {

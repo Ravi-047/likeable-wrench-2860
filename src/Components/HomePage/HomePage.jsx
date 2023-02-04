@@ -298,7 +298,9 @@ const HomePage = () => {
           <Link
             to={`/${city}/${name}`}
             key={id}
-            className={styles.eachCategory}
+            className={
+              name === "Furniture" ? styles.__furniture__ : styles.eachCategory
+            }
           >
             <div>{icon}</div>
             <p>{name}</p>
