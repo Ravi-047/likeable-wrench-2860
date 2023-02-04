@@ -15,7 +15,10 @@ import { Cart } from "../Components/cartPage/Cartproduct";
 import { Payment } from "../Components/cartPage/payment";
 import Register from "./User/Register";
 import Login from "./User/Login";
+import Sucess from "../Components/cartPage/Sucess";
+
 const MainRoutes = () => {
+  const token = localStorage.getItem("token");
   const location = "bangalore";
   return (
     <Routes>
@@ -27,8 +30,9 @@ const MainRoutes = () => {
       <Route path={`/:${location}/register`} element={<Register />} />
       <Route path={`/:${location}/login`} element={<Login />} />
       <Route path="/blank" element={<BlankCart />} />
+      <Route path="/paymentsucess" element={token ? <Sucess /> : <Login />} />
       <Route path="/cart" element={<Cart />} />
-      <Route path="/cart/payment" element={<Payment />} />
+      <Route path="/cart/payment" element={token ? <Payment /> : <Login />} />
       <Route path="/account" element={<Account />} />
       <Route path="/wishlist" element={<BlankWishList />} />
       <Route path="/setting" element={<SettingPage />} />

@@ -13,6 +13,7 @@ import {
   Menu,
   Box,
   Flex,
+  useToast,
 } from "@chakra-ui/react";
 import { SearchIcon, ChevronDownIcon } from "@chakra-ui/icons";
 // import ReactSearchBox from "react-search-box";
@@ -25,6 +26,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { getCarts } from "../../Redux/cart/action.cart";
 const Navbar = () => {
+  const toast = useToast();
   const { city } = useContext(CityContext);
   const [result, setResult] = useState([]);
   const navigate = useNavigate();
@@ -47,7 +49,18 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("a_verifyid");
+    localStorage.removeItem("username");
+
     setLogout(true);
+    toast({
+      position: "top",
+      title: "Logout Successfull",
+      description: "Please Visit Again, Have a Good Day",
+      status: "success",
+      duration: 3000,
+      isClosable: true,
+    });
   };
 
   useEffect(() => {
@@ -146,11 +159,16 @@ const Navbar = () => {
             </Link>
           ) : (
             <Menu>
-              <MenuButton as={Button} righticon={<ChevronDownIcon />}>
+              <MenuButton
+                className="__cart___data____"
+                as={Button}
+                righticon={<ChevronDownIcon />}
+              >
                 <Flex>
                   {" "}
                   <FaShoppingCart />{" "}
                   <Text className="__cart_Text_none"> Cart</Text>{" "}
+                  <div className="_cart__counting_">{cartItem.length}</div>
                 </Flex>
               </MenuButton>
               <MenuList h="300px" overflowY="auto">

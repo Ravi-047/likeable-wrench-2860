@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -12,6 +12,7 @@ import "./ProductCarousel.css";
 
 const ProductCarousel = () => {
   const { city } = useContext(CityContext);
+  const [loading, setLoading] = useState(false);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -36,10 +37,12 @@ const ProductCarousel = () => {
   const productData = useSelector((store) => store.furniture.products);
 
   useEffect(() => {
+    setLoading(true);
     if (productData.length === 0) {
       dispatch(getProducts());
-      dispatch(getCarts());
     }
+    dispatch(getCarts());
+    setLoading(false);
   }, [dispatch, productData.length]);
 
   const product = productData?.map((item) => (
@@ -60,20 +63,37 @@ const ProductCarousel = () => {
     </Link>
   ));
 
-  return (
-    <div>
-      <div className="__outer_div_carousel__">
-        <Carousel
-          responsive={responsive}
-          autoPlay={true}
-          infinite={true}
-          itemClass="carousel-item-padding-40-px"
+  if (loading) {
+    return (
+      <div>
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "25px",
+            marginTop: "30px",
+            marginBottom: "30px",
+          }}
         >
-          {product}
-        </Carousel>
+          Loading...
+        </h1>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div>
+        <div className="__outer_div_carousel__">
+          <Carousel
+            responsive={responsive}
+            autoPlay={true}
+            infinite={true}
+            itemClass="carousel-item-padding-40-px"
+          >
+            {product}
+          </Carousel>
+        </div>
+      </div>
+    );
+  }
 };
 
 export default ProductCarousel;

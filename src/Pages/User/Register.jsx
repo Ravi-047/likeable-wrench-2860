@@ -1,3 +1,4 @@
+import { useToast } from "@chakra-ui/react";
 import React, { useContext, useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +9,7 @@ import FormInput from "./FormInput";
 import "./register.css";
 
 const Register = () => {
+  const toast = useToast();
   const { city } = useContext(CityContext);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -78,10 +80,24 @@ const Register = () => {
     event.preventDefault();
     const userExists = userData.find((item) => item.email === values.email);
     if (userExists) {
-      alert(`${values.email} is already Registered Please Login, Thank You`);
+      toast({
+        title: "Login Successfull",
+        description: `${values.email} is already Registered Please Login, Thank You`,
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
       navigate(`/${city}/login`);
     } else {
-      dispatch(registerUser(values)).then(navigate(`/${city}/login`));
+      dispatch(registerUser(values));
+      toast({
+        title: "Successfull Registered",
+        description: `Thank You ${values.username}`,
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+      navigate(`/${city}/login`);
     }
   };
 
@@ -97,28 +113,30 @@ const Register = () => {
   };
 
   return (
-    <div className="__register_form__">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        {inputs?.map((input) => (
-          <FormInput
-            key={input.id}
-            {...input}
-            value={values[input.name]}
-            onChange={onChange}
-          />
-        ))}
-        <button>Submit</button>
-        <p style={{ textAlign: "center", marginTop: "20px" }}>
-          Have an account{" "}
-          <Link
-            to={`/${city}/login`}
-            style={{ textDecoration: "underline", color: "blue" }}
-          >
-            Login
-          </Link>
-        </p>
-      </form>
+    <div>
+      <div className="__register_form__">
+        <h2>Register</h2>
+        <form onSubmit={handleSubmit}>
+          {inputs?.map((input) => (
+            <FormInput
+              key={input.id}
+              {...input}
+              value={values[input.name]}
+              onChange={onChange}
+            />
+          ))}
+          <button>Submit</button>
+          <p style={{ textAlign: "center", marginTop: "20px" }}>
+            Have an account{" "}
+            <Link
+              to={`/${city}/login`}
+              style={{ textDecoration: "underline", color: "blue" }}
+            >
+              Login
+            </Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 };

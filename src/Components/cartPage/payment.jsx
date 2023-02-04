@@ -4,10 +4,15 @@ import chip from "./image/chip.png";
 import visa from "./image/visa.png";
 import { useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteCarts } from "../../Redux/cart/action.cart";
 
 export const Payment = () => {
   const toast = useToast();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const data = useSelector((store) => store.dataCart.carts);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     toast({
@@ -20,10 +25,13 @@ export const Payment = () => {
     });
 
     setTimeout(function () {
-      navigate("/");
-    }, 3000);
+      navigate("/paymentsucess");
+    }, 1000);
 
-    return null;
+    for (let i = 0; i < data.length; i++) {
+      console.log(data[i].id);
+      dispatch(deleteCarts(data[i].id));
+    }
   };
 
   return (
@@ -64,19 +72,22 @@ export const Payment = () => {
         <form action="" onSubmit={handleSubmit}>
           <div className="inputBox">
             <span>card number</span>
-            <input type="text" maxLength="16" className="card-number-input" />
+            <input
+              type="text"
+              maxLength="16"
+              className="card-number-input"
+              required
+            />
           </div>
           <div className="inputBox">
             <span>card holder</span>
-            <input type="text" className="card-holder-input" />
+            <input type="text" className="card-holder-input" required />
           </div>
           <div className="flexbox">
             <div className="inputBox">
               <span>expiration mm</span>
-              <select name="" id="" className="month-input">
-                <option value="month" selected disabled>
-                  month
-                </option>
+              <select name="" id="" className="month-input" required>
+                <option value="">Month</option>
                 <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
@@ -93,10 +104,8 @@ export const Payment = () => {
             </div>
             <div className="inputBox">
               <span>expiration yy</span>
-              <select name="" id="" className="year-input">
-                <option value="year" selected disabled>
-                  year
-                </option>
+              <select name="" id="" className="year-input" required>
+                <option value="">Year</option>
                 <option value="2021">2021</option>
                 <option value="2022">2022</option>
                 <option value="2023">2023</option>
@@ -111,7 +120,7 @@ export const Payment = () => {
             </div>
             <div className="inputBox">
               <span>cvv</span>
-              <input type="text" maxLength="4" className="cvv-input" />
+              <input type="text" maxLength="4" className="cvv-input" required />
             </div>
           </div>
           <input type="submit" value="submit" className="submit-btn" />

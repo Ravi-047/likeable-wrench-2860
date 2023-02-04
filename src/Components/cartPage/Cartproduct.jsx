@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./CartProduct.css";
 import {
   Button,
@@ -19,22 +19,110 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCarts, getCarts } from "../../Redux/cart/action.cart";
+import { CityContext } from "../../Context/CityContext";
 
 export const Cart = () => {
+  const { city } = useContext(CityContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const toast = useToast();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
+  const [value, setValue] = useState("");
+  const [verify, setVerify] = useState(false);
+  const [address, setAddress] = useState("");
+  const [flat, setFlat] = useState("");
   const data = useSelector((store) => store.dataCart.carts);
+  const token = localStorage.getItem("token");
+  const a_verify = localStorage.getItem("a_verifyid");
 
   const deletehandler = (id) => {
     dispatch(deleteCarts(id));
   };
 
   const paymenthandler = () => {
-    navigate("/cart/payment");
+    if (address === "" && flat === "") {
+      toast({
+        title: "Please fill all the fields",
+        description: "Provide a valid address",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    } else if (!token) {
+      toast({
+        title: "Please Login",
+        description: "Please Login first to Checkout",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+      navigate(`/${city}/login`);
+    } else {
+      toast({
+        title: "Address added successfully",
+        description: "Thank You Address added",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+      navigate("/cart/payment");
+    }
+  };
+
+  const pattern = /^\d{10}$/;
+  const validateMobileNumber = () => {
+    if (!pattern.test(value)) {
+      toast({
+        title: "Please Enter Your Mobile Number",
+        description: "Please Enter a Valid Mobile Number",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    } else if (!token) {
+      toast({
+        title: "Please Login",
+        description: `Please Login to Verify the Number, Thank You`,
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+      navigate(`/${city}/login`);
+    } else {
+      toast({
+        title: "Number verify successfully",
+        description: "Please click on Add New Address",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+      setVerify(true);
+      localStorage.setItem("a_verifyid", value);
+    }
+  };
+
+  const openAddress = () => {
+    if (!pattern.test(value)) {
+      toast({
+        title: "Please Enter Your Mobile Number",
+        description: "Please Enter a Valid Mobile Number",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    } else if (verify === false) {
+      toast({
+        title: "Please Verify Your Mobile Number",
+        description: "Please Enter a Valid Mobile Number and Verify",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    } else {
+      onOpen();
+    }
   };
 
   useEffect(() => {
@@ -122,101 +210,117 @@ export const Cart = () => {
               <br></br>
               <br></br>
               <hr></hr>
-              <div className="verification">
-                <div className="verificationFlex">
-                  <h3>Verify Your Phone Number</h3>
-                  <div className="numberVerify">
-                    <input
-                      placeholder="Entre your phone number *"
-                      className="numberVerifyInput"
-                    />
-                    <button
-                      className="numberVerifyBtn"
-                      onClick={() =>
-                        toast({
-                          title: "Number verify successfully",
-                          description: "Please click on Add New Address",
-                          status: "success",
-                          duration: 9000,
-                          isClosable: true,
-                        })
-                      }
-                    >
-                      Go
-                    </button>
-                  </div>
-                </div>
+              {a_verify ? (
                 <div>
-                  <img
-                    src="https://www.rentomojo.com/public/images/radical-cart/cat__banner.png"
-                    alt="cartImg"
-                  />
+                  <button className="__verify__Addressed__">Checkout</button>
                 </div>
-              </div>
-              <div className="verification">
-                <div className="verificationFlex">
-                  <h3>Address & Payment</h3>
-                  <div className="numberVerify">
-                    <div
-                      className="Big_btn_div2"
-                      ref={btnRef}
-                      colorscheme="teal"
-                      onClick={onOpen}
-                      style={{ cursor: "pointer" }}
-                    >
-                      <p>Add new address</p>
+              ) : (
+                <>
+                  <div className="verification">
+                    <div className="verificationFlex">
+                      <h3>Verify Your Phone Number</h3>
+                      <div className="numberVerify">
+                        <input
+                          placeholder="Entre your phone number *"
+                          className="numberVerifyInput"
+                          nmae="mobileNumber"
+                          value={value}
+                          onChange={(e) => setValue(e.target.value)}
+                          required
+                        />
+                        <button
+                          className="numberVerifyBtn"
+                          onClick={validateMobileNumber}
+                        >
+                          Go
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <img
+                        src="https://www.rentomojo.com/public/images/radical-cart/cat__banner.png"
+                        alt="cartImg"
+                      />
                     </div>
                   </div>
-                  <Drawer
-                    isOpen={isOpen}
-                    placement="right"
-                    onClose={onClose}
-                    finalFocusRef={btnRef}
-                    size="md"
-                  >
-                    <DrawerOverlay />
-                    <DrawerContent>
-                      <br></br>
-                      <br></br>
-                      <br></br>
-                      <DrawerCloseButton />
-                      <DrawerHeader>Add Delivery Address</DrawerHeader>
-                      <FormControl className="Address_form">
-                        <FormLabel>Country</FormLabel>
-                        <Select placeholder="Select country">
-                          <option>India</option>
-                          <option>USA</option>
-                          <option>Chaina</option>
-                          <option>Argentina</option>
-                          <option>Nigeria</option>
-                        </Select>
-                        <br></br>
-                        <FormLabel>Address</FormLabel>
-                        <Textarea placeholder="Entre your Address Here..." />
-                      </FormControl>
-                      <DrawerBody>
-                        <FormLabel>Flat No/ Floor etc.</FormLabel>
-                        <Textarea placeholder="Flat Number / Building Name" />
-                      </DrawerBody>
+                  <div className="verification">
+                    <div className="verificationFlex">
+                      <h3>Address & Payment</h3>
+                      <div className="numberVerify">
+                        <div
+                          className="Big_btn_div2"
+                          ref={btnRef}
+                          colorscheme="teal"
+                          onClick={openAddress}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <p>Add new address</p>
+                        </div>
+                      </div>
+                      <Drawer
+                        isOpen={isOpen}
+                        placement="right"
+                        onClose={onClose}
+                        finalFocusRef={btnRef}
+                        size="md"
+                      >
+                        <DrawerOverlay />
+                        <DrawerContent>
+                          <br></br>
+                          <br></br>
+                          <br></br>
+                          <DrawerCloseButton />
+                          <DrawerHeader>Add Delivery Address</DrawerHeader>
+                          <FormControl className="Address_form">
+                            <FormLabel>Country</FormLabel>
+                            <Select placeholder="Select country">
+                              <option>India</option>
+                              <option>USA</option>
+                              <option>Chaina</option>
+                              <option>Argentina</option>
+                              <option>Nigeria</option>
+                            </Select>
+                            <br></br>
+                            <FormLabel>Address</FormLabel>
+                            <Textarea
+                              placeholder="Entre your Address Here..."
+                              required
+                              name="address"
+                              value={address}
+                              onChange={(e) => setAddress(e.target.value)}
+                            />
+                          </FormControl>
+                          <DrawerBody>
+                            <FormLabel>Flat No/ Floor etc.</FormLabel>
+                            <Textarea
+                              placeholder="Flat Number / Building Name"
+                              required
+                              name="flat"
+                              value={flat}
+                              onChange={(e) => setFlat(e.target.value)}
+                            />
+                          </DrawerBody>
 
-                      <DrawerFooter>
-                        <Button variant="outline" mr={3} onClick={onClose}>
-                          Cancel
-                        </Button>
-                        <Button colorScheme="blue" onClick={paymenthandler}>
-                          Complete Payment
-                        </Button>
-                      </DrawerFooter>
-                    </DrawerContent>
-                  </Drawer>
-                </div>
-                <div>
-                  <img
-                    src="https://www.rentomojo.com/public/images/radical-cart/address__banner.svg"
-                    alt="cartImg"
-                  />
-                </div>
-              </div>
+                          <DrawerFooter>
+                            <Button variant="outline" mr={3} onClick={onClose}>
+                              Cancel
+                            </Button>
+                            <Button colorScheme="blue" onClick={paymenthandler}>
+                              Complete Payment
+                            </Button>
+                          </DrawerFooter>
+                        </DrawerContent>
+                      </Drawer>
+                    </div>
+                    <div>
+                      <img
+                        src="https://www.rentomojo.com/public/images/radical-cart/address__banner.svg"
+                        alt="cartImg"
+                      />
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
             <div className="productsDiv">
               <div className="coupon">

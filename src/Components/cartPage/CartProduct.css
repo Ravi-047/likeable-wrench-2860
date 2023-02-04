@@ -85,6 +85,7 @@
   border-radius: 5px;
   color: white;
   width: 160px;
+  margin-left: 15px;
 }
 
 .fetchDiv {
@@ -138,7 +139,6 @@
 }
 
 .ImportingDiv {
-  border: 1px solid;
   margin: 5px;
   border-radius: 10px;
   padding: 5px;
@@ -229,4 +229,21 @@
 
 .Address_form {
   padding: 20px;
+}
+
+.__verify__Addressed__ {
+  border: 1px solid lightgreen;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 3px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.__verify__Addressed__:hover {
+  border: 1px solid green;
+  background-color: lightgreen;
 }
