@@ -36,6 +36,7 @@ export const Cart = () => {
   const data = useSelector((store) => store.dataCart.carts);
   const token = localStorage.getItem("token");
 
+  console.log(data);
   // const a_verify = localStorage.getItem("a_verifyid");
 
   const deletehandler = (id) => {
@@ -60,6 +61,15 @@ export const Cart = () => {
         isClosable: true,
       });
       navigate(`/${city}/login`);
+    } else if (data.length === 0) {
+      toast({
+        title: "No Item",
+        description: "No Item in the Cart, Please add the Item in the cart",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+      navigate(`/${city}/Furniture`);
     } else {
       toast({
         title: "Address added successfully",
