@@ -13,6 +13,17 @@
 <p> Whether you have a home or have just rented a room here, you’ll find everything you need on our website. We offer top-quality furniture, appliances, and electronics, made by the most dependable, in-demand brands around. If you choose to rent from us, you will receive multiple rewards like free maintenance, free relocation, and damage waiver.</p>
 <h1>lets have a look on the website pages </h1>
 <br>
+
+## Tech Stack
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) 
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) 
+<br>
 <li>
 Dynamic Navbar with Search Input Box.</li>
 <img width="1431" alt="Screenshot 2022-12-19 at 1 29 26 AM" src="https://user-images.githubusercontent.com/110046267/208317423-83cbd9a4-0ff9-41d9-8dbb-3e7487c06f8f.png">
