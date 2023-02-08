@@ -35,7 +35,8 @@ export const Cart = () => {
   const [flat, setFlat] = useState("");
   const data = useSelector((store) => store.dataCart.carts);
   const token = localStorage.getItem("token");
-  const a_verify = localStorage.getItem("a_verifyid");
+
+  // const a_verify = localStorage.getItem("a_verifyid");
 
   const deletehandler = (id) => {
     dispatch(deleteCarts(id));
@@ -210,117 +211,117 @@ export const Cart = () => {
               <br></br>
               <br></br>
               <hr></hr>
-              {a_verify ? (
+              {/* {a_verify ? (
                 <div>
                   <button className="__verify__Addressed__">Checkout</button>
                 </div>
-              ) : (
-                <>
-                  <div className="verification">
-                    <div className="verificationFlex">
-                      <h3>Verify Your Phone Number</h3>
-                      <div className="numberVerify">
-                        <input
-                          placeholder="Entre your phone number *"
-                          className="numberVerifyInput"
-                          nmae="mobileNumber"
-                          value={value}
-                          onChange={(e) => setValue(e.target.value)}
+              ) : ( */}
+              {/* <> */}
+              <div className="verification">
+                <div className="verificationFlex">
+                  <h3>Verify Your Phone Number</h3>
+                  <div className="numberVerify">
+                    <input
+                      placeholder="Entre your phone number *"
+                      className="numberVerifyInput"
+                      nmae="mobileNumber"
+                      value={value}
+                      onChange={(e) => setValue(e.target.value)}
+                      required
+                    />
+                    <button
+                      className="numberVerifyBtn"
+                      onClick={validateMobileNumber}
+                    >
+                      Go
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="https://www.rentomojo.com/public/images/radical-cart/cat__banner.png"
+                    alt="cartImg"
+                  />
+                </div>
+              </div>
+              <div className="verification">
+                <div className="verificationFlex">
+                  <h3>Address & Payment</h3>
+                  <div className="numberVerify">
+                    <div
+                      className="Big_btn_div2"
+                      ref={btnRef}
+                      colorscheme="teal"
+                      onClick={openAddress}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <p>Add new address</p>
+                    </div>
+                  </div>
+                  <Drawer
+                    isOpen={isOpen}
+                    placement="right"
+                    onClose={onClose}
+                    finalFocusRef={btnRef}
+                    size="md"
+                  >
+                    <DrawerOverlay />
+                    <DrawerContent>
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <DrawerCloseButton />
+                      <DrawerHeader>Add Delivery Address</DrawerHeader>
+                      <FormControl className="Address_form">
+                        <FormLabel>Country</FormLabel>
+                        <Select placeholder="Select country">
+                          <option>India</option>
+                          <option>USA</option>
+                          <option>Chaina</option>
+                          <option>Argentina</option>
+                          <option>Nigeria</option>
+                        </Select>
+                        <br></br>
+                        <FormLabel>Address</FormLabel>
+                        <Textarea
+                          placeholder="Entre your Address Here..."
                           required
+                          name="address"
+                          value={address}
+                          onChange={(e) => setAddress(e.target.value)}
                         />
-                        <button
-                          className="numberVerifyBtn"
-                          onClick={validateMobileNumber}
-                        >
-                          Go
-                        </button>
-                      </div>
-                    </div>
-                    <div>
-                      <img
-                        src="https://www.rentomojo.com/public/images/radical-cart/cat__banner.png"
-                        alt="cartImg"
-                      />
-                    </div>
-                  </div>
-                  <div className="verification">
-                    <div className="verificationFlex">
-                      <h3>Address & Payment</h3>
-                      <div className="numberVerify">
-                        <div
-                          className="Big_btn_div2"
-                          ref={btnRef}
-                          colorscheme="teal"
-                          onClick={openAddress}
-                          style={{ cursor: "pointer" }}
-                        >
-                          <p>Add new address</p>
-                        </div>
-                      </div>
-                      <Drawer
-                        isOpen={isOpen}
-                        placement="right"
-                        onClose={onClose}
-                        finalFocusRef={btnRef}
-                        size="md"
-                      >
-                        <DrawerOverlay />
-                        <DrawerContent>
-                          <br></br>
-                          <br></br>
-                          <br></br>
-                          <DrawerCloseButton />
-                          <DrawerHeader>Add Delivery Address</DrawerHeader>
-                          <FormControl className="Address_form">
-                            <FormLabel>Country</FormLabel>
-                            <Select placeholder="Select country">
-                              <option>India</option>
-                              <option>USA</option>
-                              <option>Chaina</option>
-                              <option>Argentina</option>
-                              <option>Nigeria</option>
-                            </Select>
-                            <br></br>
-                            <FormLabel>Address</FormLabel>
-                            <Textarea
-                              placeholder="Entre your Address Here..."
-                              required
-                              name="address"
-                              value={address}
-                              onChange={(e) => setAddress(e.target.value)}
-                            />
-                          </FormControl>
-                          <DrawerBody>
-                            <FormLabel>Flat No/ Floor etc.</FormLabel>
-                            <Textarea
-                              placeholder="Flat Number / Building Name"
-                              required
-                              name="flat"
-                              value={flat}
-                              onChange={(e) => setFlat(e.target.value)}
-                            />
-                          </DrawerBody>
+                      </FormControl>
+                      <DrawerBody>
+                        <FormLabel>Flat No/ Floor etc.</FormLabel>
+                        <Textarea
+                          placeholder="Flat Number / Building Name"
+                          required
+                          name="flat"
+                          value={flat}
+                          onChange={(e) => setFlat(e.target.value)}
+                        />
+                      </DrawerBody>
 
-                          <DrawerFooter>
-                            <Button variant="outline" mr={3} onClick={onClose}>
-                              Cancel
-                            </Button>
-                            <Button colorScheme="blue" onClick={paymenthandler}>
-                              Complete Payment
-                            </Button>
-                          </DrawerFooter>
-                        </DrawerContent>
-                      </Drawer>
-                    </div>
-                    <div>
-                      <img
-                        src="https://www.rentomojo.com/public/images/radical-cart/address__banner.svg"
-                        alt="cartImg"
-                      />
-                    </div>
-                  </div>
-                </>
-              )}
+                      <DrawerFooter>
+                        <Button variant="outline" mr={3} onClick={onClose}>
+                          Cancel
+                        </Button>
+                        <Button colorScheme="blue" onClick={paymenthandler}>
+                          Complete Payment
+                        </Button>
+                      </DrawerFooter>
+                    </DrawerContent>
+                  </Drawer>
+                </div>
+                <div>
+                  <img
+                    src="https://www.rentomojo.com/public/images/radical-cart/address__banner.svg"
+                    alt="cartImg"
+                  />
+                </div>
+              </div>
+              {/* </> */}
+              {/* )} */}
             </div>
             <div className="productsDiv">
               <div className="coupon">
